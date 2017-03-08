@@ -13,6 +13,7 @@ var Mixolydian= scale[4];
 var aeolian= scale[5];
 var locrian= scale[6];
 
+var tri = [0,2,4]
 
 
 
@@ -20,31 +21,40 @@ function modeNoteList(x,mode){
   console.log(x.toUpperCase() + " " + mode + " notes")
   mode = eval(mode)
 
-  var x = notes.indexOf(x)
+  var scaleArr=[]
 
+  var x = notes.indexOf(x)
+//mode note list
   mode.forEach(function(element) {
 
     element=element + x;
 
     if(element<12){
-    console.log(notes[element]);
+    scaleArr.push(notes[element]);
     element=element - x
 
   }else if(element>=12){
     element=element-12;
-    console.log(notes[element]);
+    scaleArr.push(notes[element]);
     element=element+x+12
  
   }
 
   });
-  console.log("end")
+
+  console.log(scaleArr)
+  return scaleArr
+
+//chord note list
+  scaleArr.forEach(function(element){
+    var chordArr = 
+
+  });
 }
 
 modeNoteList("a","aeolian")
-
-
-
+modeNoteList("b","aeolian")
+modeNoteList("c","phrygian")
 
 
 
