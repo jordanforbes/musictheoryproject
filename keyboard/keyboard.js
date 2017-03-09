@@ -153,6 +153,135 @@
 			},function(){
 				$('.highASharpDisp').hide();
 				});
+
+      // dropdown
+
+      $(".dropdown-toggle").dropdown("toggle");
+
+
+
+      // chords
+
+      $('.cChord').hover(function(){
+				$('.lowCDisp').show();
+				$('.lowEDisp').show();
+				$('.lowGDisp').show();
+				$('.midCDisp').show();
+				$('.highEDisp').show();
+				$('.highGDisp').show();
+
+			},function(){
+				$('.lowCDisp').hide();
+				$('.lowEDisp').hide();
+				$('.lowGDisp').hide();
+				$('.midCDisp').hide();
+				$('.highEDisp').hide();
+				$('.highGDisp').hide();
+				});
+
+      $('.dChord').hover(function(){
+				$('.lowDDisp').show();
+				$('.lowFSharpDisp').show();
+				$('.lowADisp').show();
+				$('.highDDisp').show();
+				$('.highFSharpDisp').show();
+				$('.highADisp').show();
+
+			},function(){
+				$('.lowDDisp').hide();
+				$('.lowFSharpDisp').hide();
+				$('.lowADisp').hide();
+				$('.highDDisp').hide();
+				$('.highFSharpDisp').hide();
+				$('.highADisp').hide();
+				});
+
+       $('.eChord').hover(function(){
+				$('.lowEDisp').show();
+				$('.lowGSharpDisp').show();
+				$('.lowBDisp').show();
+				$('.highEDisp').show();
+				$('.highGSharpDisp').show();
+				$('.highBDisp').show();
+
+			},function(){
+				$('.lowEDisp').hide();
+				$('.lowGSharpDisp').hide();
+				$('.lowBDisp').hide();
+				$('.highEDisp').hide();
+				$('.highGSharpDisp').hide();
+				$('.highBDisp').hide();
+				});
+
+       $('.fChord').hover(function(){
+				$('.lowCDisp').show();
+				$('.lowFDisp').show();
+				$('.lowADisp').show();
+				$('.midCDisp').show();
+				$('.highFDisp').show();
+				$('.highADisp').show();
+
+			},function(){
+				$('.lowCDisp').hide();
+				$('.lowFDisp').hide();
+				$('.lowADisp').hide();
+				$('.midCDisp').hide();
+				$('.highFDisp').hide();
+				$('.highADisp').hide();
+				});
+
+       $('.gChord').hover(function(){
+				$('.lowDDisp').show();
+				$('.lowGDisp').show();
+				$('.lowBDisp').show();
+				$('.highDDisp').show();
+				$('.highGDisp').show();
+				$('.highBDisp').show();
+
+			},function(){
+				$('.lowDDisp').hide();
+				$('.lowGDisp').hide();
+				$('.lowBDisp').hide();
+				$('.highDDisp').hide();
+				$('.highGDisp').hide();
+				$('.highBDisp').hide();
+				});
+
+ 		$('.aChord').hover(function(){
+				$('.lowCSharpDisp').show();
+				$('.lowEDisp').show();
+				$('.lowADisp').show();
+				$('.midCSharpDisp').show();
+				$('.highEDisp').show();
+				$('.highADisp').show();
+
+			},function(){
+				$('.lowCSharpDisp').hide();
+				$('.lowEDisp').hide();
+				$('.lowADisp').hide();
+				$('.midCSharpDisp').hide();
+				$('.highEDisp').hide();
+				$('.highADisp').hide();
+				});
+
+ 		$('.bChord').hover(function(){
+				$('.lowDSharpDisp').show();
+				$('.lowFSharpDisp').show();
+				$('.lowBDisp').show();
+				$('.highDSharpDisp').show();
+				$('.highFSharpDisp').show();
+				$('.highBDisp').show();
+
+			},function(){
+				$('.lowDSharpDisp').hide();
+				$('.lowFSharpDisp').hide();
+				$('.lowBDisp').hide();
+				$('.highDSharpDisp').hide();
+				$('.highFSharpDisp').hide();
+				$('.highBDisp').hide();
+				});
+
+
         
     });
 
