@@ -26,8 +26,10 @@ $(document).ready(function() {
 		console.log(name)
 	})
 
-	$('.reset').click(function(){
-		
+	$('.reset').click(function reset(){
+		$(".blackKey").css("background-color","black")
+		$(".whiteKey").css("background-color","white")
+		$(".blackKeySpace").css("background-color","white")
 	})
 
 
