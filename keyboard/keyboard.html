@@ -6,10 +6,21 @@
 
 	<link rel="stylesheet" type="text/css" href="keyboard.css">
 	<link rel="stylesheet" type="text/css" href="bootstrap.css">
+
+	<script type="text/javascript" src="jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="keyboard.js"></script>
+	
+	<script type="text/javascript" src="guitar.js"></script>
 </head>
 <body>
 
+
 <div class="container">
+
+<button class="CMajor">C Major</button>
+<button class="CsMajor">C# Major</button>
+<button class="DMajor">D Major</button>
+
 
 	<div class="keyboardContainer">
 
@@ -20,18 +31,18 @@
 			
 		<div class="lowC leftSideBorder blackKeySpace"><div class="noteB"></div></div>
 		<div class="lowC blackKeySpace"><div class="noteB"></div></div>
-		<div class="blackKey lowCSharp"><div class="noteB lowCSharpDisp">C# - Db</div></div>
+		<div class="C#note blackKey lowCSharp"><div class="c#note noteB lowCSharpDisp">C# - Db</div></div>
 		<div class="lowD blackKeySpace"><div class="noteB"></div></div>
-		<div class="blackKey lowDSharp"><div class="noteB lowDSharpDisp">D# - Eb</div></div>
+		<div class="D#note blackKey lowDSharp"><div class="noteB lowDSharpDisp">D# - Eb</div></div>
 		<div class="lowE blackKeySpace"><div class="noteB"></div></div>
 		<div class="lowE rightSideBorder blackKeySpace"><div class="noteB"></div></div>
 		<div class="lowF leftSideBorder blackKeySpace"><div class="noteB"></div></div>
 		<div class="lowF blackKeySpace"><div class="noteB"></div></div>
-		<div class="blackKey lowFSharp"><div class="noteB lowFSharpDisp">F# - Gb</div></div>
+		<div class="F#note blackKey lowFSharp"><div class="noteB lowFSharpDisp">F# - Gb</div></div>
 		<div class="lowG blackKeySpace"><div class="noteB"></div></div>
-		<div class="blackKey lowGSharp"><div class="noteB lowGSharpDisp">G# - Ab</div></div>
+		<div class="G#note blackKey lowGSharp"><div class="noteB lowGSharpDisp">G# - Ab</div></div>
 		<div class="lowA blackKeySpace"><div class="noteB"></div></div>
-		<div class="blackKey lowASharp"><div class="noteB lowASharpDisp">A# - Bb</div></div>
+		<div class="A#note blackKey lowASharp"><div class="noteB lowASharpDisp">A# - Bb</div></div>
 		<div class="lowB blackKeySpace"><div class="noteB"></div></div>
 		<div class="lowB rightSideBorder blackKeySpace"><div class="noteB"></div></div>
 
@@ -40,18 +51,18 @@
 
 		<div class="midC leftSideBorder blackKeySpace"><div class="noteB"></div></div>
 		<div class="midC blackKeySpace"><div class="noteB"></div></div>
-		<div class="blackKey midCSharp"><div class="noteB midCSharpDisp">C# - Db</div></div>
+		<div class="C#note blackKey midCSharp"><div class="noteB midCSharpDisp">C# - Db</div></div>
 		<div class="highD blackKeySpace"><div class="noteB"></div></div>
-		<div class="blackKey highDSharp"><div class="noteB highDSharpDisp">D# - Eb</div></div>
+		<div class="D#note blackKey highDSharp"><div class="noteB highDSharpDisp">D# - Eb</div></div>
 		<div class="highE blackKeySpace"><div class="noteB"></div></div>
 		<div class="highE rightSideBorder blackKeySpace"><div class="noteB"></div></div>
 		<div class="highF leftSideBorder blackKeySpace"><div class="noteB"></div></div>
 		<div class="highF blackKeySpace"><div class="noteB"></div></div>
-		<div class="blackKey highFSharp"><div class="noteB highFSharpDisp">F# - Gb</div></div>
+		<div class="F#note blackKey highFSharp"><div class="noteB highFSharpDisp">F# - Gb</div></div>
 		<div class="highG blackKeySpace"><div class="noteB"></div></div>
-		<div class="blackKey highGSharp"><div class="noteB highGSharpDisp">G# - Ab</div></div>
+		<div class="G#note blackKey highGSharp"><div class="noteB highGSharpDisp">G# - Ab</div></div>
 		<div class="highA blackKeySpace"><div class="noteB"></div></div>
-		<div class="blackKey highASharp"><div class="noteB highASharpDisp">A# - Bb</div></div>
+		<div class="A#note blackKey highASharp"><div class="noteB highASharpDisp">A# - Bb</div></div>
 		<div class="highB blackKeySpace"><div class="noteB"></div></div>
 		<div class="highB rightSideBorder blackKeySpace"><div class="noteB"></div></div>
 
@@ -65,36 +76,36 @@
 
 		<div class="whiteKeyContainer">
 
-			<div class="lowC whiteKey"><div class="noteW lowCDisp">C</div></div>
+			<div class="cnote lowC whiteKey"><div class="noteW lowCDisp">C</div></div>
 
-			<div class="lowD whiteKey"><div class="noteW lowDDisp">D</div></div>
+			<div class="dnote lowD whiteKey"><div class="noteW lowDDisp">D</div></div>
 
-			<div class="lowE whiteKey"><div class="noteW lowEDisp">E</div></div>
+			<div class="enote lowE whiteKey"><div class="noteW lowEDisp">E</div></div>
 
-			<div class="lowF whiteKey"><div class="noteW lowFDisp">F</div></div>
+			<div class="fnote lowF whiteKey"><div class="noteW lowFDisp">F</div></div>
 
-			<div class="lowG whiteKey"><div class="noteW lowGDisp">G</div></div>
+			<div class="gnote lowG whiteKey"><div class="noteW lowGDisp">G</div></div>
  
-			<div class="lowA whiteKey"><div class="noteW lowADisp">A</div></div>
+			<div class="anote lowA whiteKey"><div class="noteW lowADisp">A</div></div>
 
-			<div class="lowB whiteKey"><div class="noteW lowBDisp">B</div></div>
+			<div class="bnote lowB whiteKey"><div class="noteW lowBDisp">B</div></div>
  
-			<div class="midC whiteKey"><div class="noteW midCDisp">C</div></div>
+			<div class="cnote midC whiteKey"><div class="noteW midCDisp">C</div></div>
 
-			<div class="highD whiteKey"><div class="noteW highDDisp">D</div></div>
+			<div class="dnote highD whiteKey"><div class="noteW highDDisp">D</div></div>
 
-			<div class="highE whiteKey"><div class="noteW highEDisp">E</div></div>
+			<div class="enote highE whiteKey"><div class="noteW highEDisp">E</div></div>
 			
-			<div class="highF whiteKey"><div class="noteW highFDisp">F</div></div>
+			<div class="fnote highF whiteKey"><div class="noteW highFDisp">F</div></div>
 
-			<div class="highG whiteKey"><div class="noteW highGDisp">G</div></div>
+			<div class="gnote highG whiteKey"><div class="noteW highGDisp">G</div></div>
 
-			<div class="highA whiteKey"><div class="noteW highADisp">A</div></div>
+			<div class="anote highA whiteKey"><div class="noteW highADisp">A</div></div>
 
-			<div class="highB whiteKey"><div class="noteW highBDisp">B</div></div>
+			<div class="bnote highB whiteKey"><div class="noteW highBDisp">B</div></div>
 
 		</div>
-
+Chord: <span class="Chordname">none</span>
 	</div>
 
 </div>
@@ -102,8 +113,7 @@
 
 
 
-<script type="text/javascript" src="jquery-3.1.1.min.js"></script>
-<script type="text/javascript" src="keyboard.js"></script>
+
 </body>
 </html>
 

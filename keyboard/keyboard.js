@@ -1,6 +1,53 @@
 
-	$(document).ready(function() {
+$(document).ready(function() {
+	Maj("c#")
+	$('.CMajor').click(function(){
+		$(".Chordname").html(
+			Maj("c")
+		)
+		for(i=0;i<Maj("c").length;i++){
+			clsnm= "."+Maj("c")[i]+"note"
+			console.log(clsnm)
 
+			if(i>0){
+				$(clsnm).css("background-color","orange")
+			}else{
+				$(clsnm).css("background-color","red")
+			}
+		}
+	});
+
+	$('.CsMajor').click(function(){
+		$(".Chordname").html(
+			Maj("c#")
+		)
+		for(i=0;i<Maj("c#").length;i++){
+			clsnm= "."+Maj("c#")[i]+"note"
+			console.log(clsnm)
+
+			if(i>0){
+				$(clsnm).css("background-color","orange")
+			}else{
+				$(clsnm).css("background-color","red")
+			}
+		}
+	});
+
+		$('.DMajor').click(function(){
+		$(".Chordname").html(
+			Maj("d")
+		)
+		for(i=0;i<Maj("d").length;i++){
+			clsnm= "."+Maj("d")[i]+"note"
+			console.log(clsnm)
+
+			if(i>0){
+				$(clsnm).css("background-color","orange")
+			}else{
+				$(clsnm).css("background-color","red")
+			}
+		}
+	});
 
 	// white keys
         
