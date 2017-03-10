@@ -1,9 +1,9 @@
 
 $(document).ready(function() {
-	Maj("c#")
+	Maj("c")
 	$('.CMajor').click(function(){
 		$(".Chordname").html(
-			Maj("c")
+			"C Major"
 		)
 		for(i=0;i<Maj("c").length;i++){
 			clsnm= "."+Maj("c")[i]+"note"
@@ -19,10 +19,10 @@ $(document).ready(function() {
 
 	$('.CsMajor').click(function(){
 		$(".Chordname").html(
-			Maj("c#")
+			"C# Major"
 		)
-		for(i=0;i<Maj("c#").length;i++){
-			clsnm= "."+Maj("c#")[i]+"note"
+		for(i=0;i<Maj("cs").length;i++){
+			clsnm= "."+Maj("cs")[i]+"note"
 			console.log(clsnm)
 
 			if(i>0){
@@ -35,7 +35,7 @@ $(document).ready(function() {
 
 		$('.DMajor').click(function(){
 		$(".Chordname").html(
-			Maj("d")
+			"D Major"
 		)
 		for(i=0;i<Maj("d").length;i++){
 			clsnm= "."+Maj("d")[i]+"note"
