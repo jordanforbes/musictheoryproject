@@ -35,7 +35,7 @@ $(document).ready(function() {
 		console.log(name)
 	})
 
-	$('.reset').click(reset())
+	$('.reset').click(function(){reset()})
 
 
 	// white keys
