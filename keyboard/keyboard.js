@@ -1,8 +1,17 @@
+function reset(){
+		$(".blackKey").css("background-color","black")
+		$(".whiteKey").css("background-color","white")
+		$(".blackKeySpace").css("background-color","white")
+	}
+
 
 $(document).ready(function() {
 
+
 	$('.Major').click(function(){
+		reset()
 		n= $(this).text().toLowerCase()
+
 		console.log(n)
 		
 		name= "."+ n+"Major"
@@ -26,11 +35,7 @@ $(document).ready(function() {
 		console.log(name)
 	})
 
-	$('.reset').click(function reset(){
-		$(".blackKey").css("background-color","black")
-		$(".whiteKey").css("background-color","white")
-		$(".blackKeySpace").css("background-color","white")
-	})
+	$('.reset').click(reset())
 
 
 	// white keys
