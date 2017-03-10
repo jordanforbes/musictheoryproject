@@ -25,9 +25,6 @@ var augTri= chord[1]
 var sev = chord[2]
 var fi = chord[3]
 
-var majorScales = ["ionian", "lydian", "mixolydian"];
-var minorScales = ["dorian", "phrygian", "aeolian", "locrian"];
-
 //mode notes finder
 function modeNotes(n,arr){
   mode.forEach(function(element) {
@@ -74,51 +71,39 @@ function noteFinder(n,modeName,chord){
         }else{
           console.log(n.toUpperCase() + " "+ modeName + " scale")
           console.log(scaleArr)
-        } 
-  
+        }   
 }
+
 
 //chord list
 
 
 function Maj7(n){
   console.log(n.toUpperCase() + " Major 7")
-  noteFinder(n,majorScales[0],chord[2])
+  noteFinder(n,"ionian",chord[2])
 }
 
 function Maj(n){
   console.log(n.toUpperCase() + " Major")
-  noteFinder(n,majorScales[0],chord[0])
+  noteFinder(n,"ionian",chord[0])
 }
 
 function AugTri(n){
   console.log(n.toUpperCase() + " Augmented")
-  noteFinder(n,majorScales[1],chord[1])
+  noteFinder(n,"lydian",chord[1])
 }
 
 function DimTri(n){
   console.log(n.toUpperCase() + " Diminished")
-  noteFinder(n,minorScales[3],chord[0])
+  noteFinder(n,"locrian",chord[0])
 }
 
 function fiveDyad(n){
   console.log(n.toUpperCase() + " Power Chord")
-  noteFinder(n,majorScales[0],chord[3])
+  noteFinder(n,"ionian",chord[3])
 }
 
 
-noteFinder("e", majorScales[0])
-Maj7("c")
-Maj("c")
-AugTri("c")
-DimTri("a#")
-fiveDyad("c")
-Maj("e")
-
-
-
-//cFindModeIndex(["c","c#","g"])
-//cFindModeIndex(["c","c#","d"])
 
 //note index finder
 function findNoteIndex(n){
@@ -163,10 +148,58 @@ function cFindModeIndex(n){
 
 }
 
+//make one for c sharp
+function csFindModeIndex(n){
+      var checker= 0
+      var containingMode=[]
+      findNoteIndex(n)
+     
+      for(j=0;j<7;j++){
+        for(i=0;i<3;i++){
+          k= scale[j].indexOf(thisChord[i])
+
+          if(k<0){
+            checker -=1
+          }else{
+            checker +=0
+          }
+
+        }
+        if(checker==0){
+          containingMode.push(scale[j][7])
+        }else{
+          checker = 0
+        }
+      }
+      console.log(containingMode)
+
+}
+
+
 
 
 function chordFinder(n){
   findNoteIndex(n)
 }
 
+/*
+noteFinder("e", "ionian")
+Maj7("c")
+Maj("d")
+AugTri("c")
+DimTri("a#")
+fiveDyad("c")
+Maj("g")
+*/
 
+
+//cFindModeIndex(["c","e","g"])
+cFindModeIndex(["a","c","e"])
+
+
+
+
+/*
+var majorScales = ["ionian", "lydian", "mixolydian"];
+var minorScales = ["dorian", "phrygian", "aeolian", "locrian"];
+*/
