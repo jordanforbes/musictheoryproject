@@ -15,7 +15,10 @@
 
 	<script type="text/javascript" src="musicfunctions.js"></script>
 
-	<script type="text/javascript" src="keyboard.js"></script>
+	<script type="text/javascript" src="keyboard.js">
+	</script>
+
+	
 
 </head>
 <body>
@@ -23,10 +26,33 @@
 
 
 <div class="container">
+   <button class="reset">Reset</button>
+   <div class="form-group">
+   <label for="exampleSelect1">Root Note:</label>
+    <select class="form-control" id="rootnoteselect">
+      <option value="0">C</option>
+      <option value="1">C#/Db</option>
+      <option value="2">D</option>
+      <option value="3">D#/Eb</option>
+      <option value="4" ="4">E</option>
+      <option value="5">F</option>
+      <option value="6">F#/Gb</option>
+      <option value="7">A</option>
+      <option value="8">A#/Bb</option>
+      <option value="9">B</option>
+    </select>
 
+   <label for="exampleSelect1">Chord Type:</label>
+    <select class="form-control" id="chordtypeselect">
+      <option>Major</option>
+      <option>Minor</option>
+      <option>Augmented</option>
+      <option>Diminished</option>
+    </select>
+  </div>
 
 	<div class="dropdown">
-	    <button class="btn btn-default dropdown" type="button" id="menu1" data-toggle="dropdown">Choose a chord
+	    <button class="btn btn-default dropdown" type="button" id="menu1" data-toggle="dropdown">Choose Major chord
 	    <span class="caret"></span></button>
 	    <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
 	      <li role="presentation"><a role="menuitem" tabindex="-1" href="#" class="Major cChord">C</a></li>
@@ -42,9 +68,39 @@
 	      <li role="presentation"><a role="menuitem" tabindex="-1" href="#" class="Major aChord">As</a></li>
 	      <li role="presentation"><a role="menuitem" tabindex="-1" href="#" class="Major bChord">B</a></li>
 	    </ul>
-   <button class="reset">Reset</button>
+  
    </div>
-	<div class="keyboardContainer">
+   <div class="dropdown">
+	    <button class="btn btn-default dropdown" type="button" id="menu1" data-toggle="dropdown">Choose Minor chord
+	    <span class="caret"></span></button>
+	    <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+	      <li role="presentation"><a role="menuitem" tabindex="-1" href="#" class="Minor cChord">C</a></li>
+	      <li role="presentation"><a role="menuitem" tabindex="-1" href="#" class="Minor cChord">Cs</a></li>
+	      <li role="presentation"><a role="menuitem" tabindex="-1" href="#" class="Minor dChord">D</a></li>
+	      <li role="presentation"><a role="menuitem" tabindex="-1" href="#" class="Minor dChord">Ds</a></li>
+	      <li role="presentation"><a role="menuitem" tabindex="-1" href="#" class="Minor eChord">E</a></li>
+	      <li role="presentation"><a role="menuitem" tabindex="-1" href="#" class="Minor fChord">F</a></li>
+	      <li role="presentation"><a role="menuitem" tabindex="-1" href="#" class="Minor fChord">Fs</a></li>
+	      <li role="presentation"><a role="menuitem" tabindex="-1" href="#" class="Minor gChord">G</a></li>
+	      <li role="presentation"><a role="menuitem" tabindex="-1" href="#" class="Minor gChord">Gs</a></li>
+	      <li role="presentation"><a role="menuitem" tabindex="-1" href="#" class="Minor aChord">A</a></li>
+	      <li role="presentation"><a role="menuitem" tabindex="-1" href="#" class="Minor aChord">As</a></li>
+	      <li role="presentation"><a role="menuitem" tabindex="-1" href="#" class="Minor bChord">B</a></li>
+	    </ul>
+  
+   </div>
+   <div class="dropdown">
+	    <button class="btn btn-default dropdown" type="button" id="menu1" data-toggle="dropdown">Choose a Chord Type
+	    <span class="caret"></span></button>
+	    <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+	      <li>Major</li>
+	      <li>Minor</li>
+	      <li>Diminished</li>
+	      <li>Augmented</li>
+	    </ul>
+   </div>	
+  
+	<div class="keyboardContainer keyboard">
 
 		<div class="blackKeyContainer">
 

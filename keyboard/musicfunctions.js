@@ -90,6 +90,13 @@ function Maj(n){
   return finArr
 }
 
+function Min(n){
+  finArr=[]
+  noteFinder(n,minorScales[2],chord[0])
+  console.log(finArr)
+  return finArr
+}
+
 function AugTri(n){
   console.log(n.toUpperCase() + " Augmented")
   noteFinder(n,majorScales[1],chord[1])

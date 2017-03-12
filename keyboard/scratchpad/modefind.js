@@ -13,6 +13,49 @@ var mixolydian= scale[4];
 var aeolian= scale[5];
 var locrian= scale[6];
 
+function getNoteList(n,c){
+
+	x = notes.indexOf(n)
+	y = notes.indexOf(c)
+	console.log(x)
+	console.log(y)
+
+	for(i=0;i<7;i++){
+		var mode = scale[i]
+		var scaleArr=[]
+		var modeArr=[]
+
+		mode.forEach(function(element) {
+
+	    element=element + x;
+
+	    if(element<12){
+	    scaleArr.push(element); 
+	    element=element - x
+
+	  	}else if(element>=12){
+	    element=element-12;
+	    scaleArr.push(element);
+	    element=element+x+12
+		}
+		
+		
+		if(mode.indexOf(y)>=0){
+			modeArr.push(mode[7])
+		}
+		
+	})
+scaleArr.push(scale[i][7])
+console.log(scaleArr)
+
+console.log(modeArr)
+}
+}
+
+getNoteList("e","d")
+
+
+
 function modeFind(n){
 	modeArr=[]
 	ni= notes.indexOf(n)
@@ -33,6 +76,3 @@ function modeFind(n){
 	console.log(modeArr)
 }
 
-console.log(modeFind("c"))
-console.log(modeFind("cs"))
-console.log(modeFind("e"))

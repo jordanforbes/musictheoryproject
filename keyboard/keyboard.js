@@ -8,8 +8,48 @@ function reset(){
 $(document).ready(function() {
 
 
+		
+	$('.Minor').click(function(){
+		reset()
+		
+
+		n= $(this).text().toLowerCase()
+
+		console.log(n)
+		
+		name= "."+ n+"Minor"
+
+		
+		
+		
+		$(".Chordname").html(
+			n+ " Minor")
+
+		for(i=0;i<Min(n).length;i++){
+			clsnm= "."+Min(n)[i]+"note"
+			console.log(clsnm)
+			//$('.low'+Maj(n)[i].toUpperCase()+'Disp').show()
+			//$('.high'+Maj(n)[i].toUpperCase()+'Disp').show()
+			if(i>0){
+				$(clsnm).css("background-color","orange");
+			}else{
+				$(clsnm).css("background-color","red")
+
+
+			}
+			
+
+		}
+
+		
+
+		console.log(name)
+	})		
+
 	$('.Major').click(function(){
 		reset()
+		
+
 		n= $(this).text().toLowerCase()
 
 		console.log(n)
@@ -17,19 +57,27 @@ $(document).ready(function() {
 		name= "."+ n+"Major"
 
 		
+		
+		
 		$(".Chordname").html(
 			n+ " Major")
 
 		for(i=0;i<Maj(n).length;i++){
 			clsnm= "."+Maj(n)[i]+"note"
 			console.log(clsnm)
-
+			//$('.low'+Maj(n)[i].toUpperCase()+'Disp').show()
+			//$('.high'+Maj(n)[i].toUpperCase()+'Disp').show()
 			if(i>0){
-				$(clsnm).css("background-color","orange")
+				$(clsnm).css("background-color","orange");
 			}else{
 				$(clsnm).css("background-color","red")
+
+
 			}
+			
+
 		}
+
 		
 
 		console.log(name)
@@ -39,7 +87,7 @@ $(document).ready(function() {
 
 
 	// white keys
-        
+
     $('.lowC').hover(function(){
 				$('.lowCDisp').show();
 			},function(){
