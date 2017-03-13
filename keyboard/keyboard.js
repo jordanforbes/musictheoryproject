@@ -30,12 +30,14 @@ $(document).ready(function() {
 			console.log(clsnm)
 			//$('.low'+Maj(n)[i].toUpperCase()+'Disp').show()
 			//$('.high'+Maj(n)[i].toUpperCase()+'Disp').show()
-			if(i>0){
-				$(clsnm).css("background-color","orange");
-			}else{
-				$(clsnm).css("background-color","red")
+			if(i==0){
+				$(clsnm).css("background-color","red");
+			}else if(i==1){
 
+				$(clsnm).css("background-color","yellow")
 
+			}else if(i>1){
+				$(clsnm).css("background-color","orange")
 			}
 			
 

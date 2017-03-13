@@ -94,7 +94,7 @@ $(document).ready(function() {
 			},function(){
 				$('.lowCDisp').hide();
 				});
-
+//clicker
     $('.lowC').click(function(){
     	$(this).css("background-color","red")
     	$('.midC').css("background-color","red")
