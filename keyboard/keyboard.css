@@ -1,3 +1,33 @@
+.appcontainer .container{
+	border:10px solid green;
+	padding:30px;
+	height:600px;
+	
+}
+
+#rootnoteselect{
+	width:100px;
+	display:block;
+}
+
+#rootform{
+	display:block;
+	width:100px;
+	float:right;
+	margin:10px;
+}
+
+#chordform{
+	width:150px;
+	display:block;
+	float:right;
+	margin:10px;
+}
+#chordtypeselect{
+	width:150px;
+	display:block;
+}
+
 .container{
 
 	/*background-color: blue;*/

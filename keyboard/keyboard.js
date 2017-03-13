@@ -4,11 +4,24 @@ function reset(){
 		$(".blackKeySpace").css("background-color","white")
 	}
 
+	function displayVals() {
+	  var rootNote = $( "#rootnoteselect" ).val();
+		var chordType= $("#chordtypeselect").val();
+	 func= chordType + "(rootNote)"
+
+	  eval(func)
+	 
+	}
+
+	
 
 $(document).ready(function() {
 
-
+ 
+	$( "select" ).change( displayVals );
+	
 		
+
 	$('.Minor').click(function(){
 		reset()
 		

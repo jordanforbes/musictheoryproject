@@ -78,8 +78,10 @@ function noteFinder(n,modeName,chord){
 
 
 function Maj7(n){
-  console.log(n.toUpperCase() + " Major 7")
+  finArr=[]
   noteFinder(n,majorScales[0],chord[2])
+  console.log(finArr)
+  return finArr
 }
 
 function Maj(n){
@@ -98,13 +100,17 @@ function Min(n){
 }
 
 function AugTri(n){
-  console.log(n.toUpperCase() + " Augmented")
+  finArr=[]
   noteFinder(n,majorScales[1],chord[1])
+  console.log(finArr)
+  return finArr
 }
 
 function DimTri(n){
-  console.log(n.toUpperCase() + " Diminished")
+  finArr=[]
   noteFinder(n,minorScales[3],chord[0])
+  console.log(finArr)
+  return finArr
 }
 
 function fiveDyad(n){

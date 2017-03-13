@@ -24,31 +24,42 @@
 <body>
 
 
-
+<div class="appcontainer container">
 <div class="container">
+	<div>
    <button class="reset">Reset</button>
-   <div class="form-group">
-   <label for="exampleSelect1">Root Note:</label>
-    <select class="form-control" id="rootnoteselect">
-      <option value="0">C</option>
-      <option value="1">C#/Db</option>
-      <option value="2">D</option>
-      <option value="3">D#/Eb</option>
-      <option value="4" ="4">E</option>
-      <option value="5">F</option>
-      <option value="6">F#/Gb</option>
-      <option value="7">A</option>
-      <option value="8">A#/Bb</option>
-      <option value="9">B</option>
-    </select>
-
+   <div id="chordform">
    <label for="exampleSelect1">Chord Type:</label>
     <select class="form-control" id="chordtypeselect">
-      <option>Major</option>
-      <option>Minor</option>
-      <option>Augmented</option>
-      <option>Diminished</option>
+      <option>--</option>
+      <option value="Maj">Major</option>
+      <option value="Min">Minor</option>
+      <option value="AugTri">Augmented</option>
+      <option value="DimTri">Diminished</option>
+      <option value="Maj7">Major 7</option>
+
     </select>
+    
+    </div>
+   <div class="form-group" id="rootform">
+   <label for="exampleSelect1">Root Note:</label>
+    <select class="form-control rootselect" id="rootnoteselect">
+   	  <option value="-1">--</option>
+      <option value="c">C</option>
+      <option value="cs">C#/Db</option>
+      <option value="d">D</option>
+      <option value="ds">D#/Eb</option>
+      <option value="e">E</option>
+      <option value="f">F</option>
+      <option value="fs">F#/Gb</option>
+      <option value="g">G</option>
+      <option value="gs">G#/Ab</option>
+      <option value="a">A</option>
+      <option value="as">A#/Bb</option>
+      <option value="b">B</option>
+    </select>
+    </div>
+
   </div>
 
 	<div class="dropdown">
@@ -187,7 +198,7 @@ Chord: <span class="Chordname">none</span>
 	</div>
 
 </div>
-
+</div>
 
 
 
