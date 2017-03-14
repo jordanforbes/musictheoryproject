@@ -396,18 +396,21 @@
 		
 			
 
-			for(i=0;i<Maj(n).length;i++){
-				clsnm= "."+Maj(n)[i]+"note"
-				console.log(clsnm)
-				//$('.low'+Maj(n)[i].toUpperCase()+'Disp').show()
-				//$('.high'+Maj(n)[i].toUpperCase()+'Disp').show()
-				if(i>0){
-					$(clsnm).css("background-color","hotpink");
-				}else{
-					$(clsnm).css("background-color","blue")
+			for(let i=0;i<Maj(n).length;i++){
 
+				setTimeout(function() {
 
-				}
+					clsnm= "."+Maj(n)[i]+"note"
+					console.log(clsnm)
+					//$('.low'+Maj(n)[i].toUpperCase()+'Disp').show()
+					//$('.high'+Maj(n)[i].toUpperCase()+'Disp').show()
+					if(i>0){
+						$(clsnm).css("background-color","hotpink");
+					}else{
+						$(clsnm).css("background-color","blue")
+					}
+
+				}, i*500)
 				
 
 			}
