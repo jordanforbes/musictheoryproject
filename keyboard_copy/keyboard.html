@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+
+	
+
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/JSXTransformer.js"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/JSXTransformer.js"></script>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+  	<script type="text/javascript" src="keyboard.js"></script>
+  	<link rel="stylesheet" type="text/css" href="keyboard.css">
+
+  	
+</head>
+<body>
+
+
+
+<div class="container">
+
+
+	<div class="dropdown">
+	    <button class="btn btn-default dropdown" type="button" data-toggle="dropdown">Choose a chord
+	    <span class="caret"></span></button>
+	    <ul class="dropdown-menu">
+	      <li><a href="#" class="dropChord cChord">C</a></li>
+	      <li><a href="#" class="dropChord dChord">D</a></li>
+	      <li><a href="#" class="dropChord eChord">E</a></li>
+	      <li><a href="#" class="dropChord fChord">F</a></li>
+	      <li><a href="#" class="dropChord gChord">G</a></li>
+	      <li><a href="#" class="dropChord aChord">A</a></li>
+	      <li><a href="#" class="dropChord bChord">B</a></li>
+	    </ul>
+   </div>
+
+	<div class="keyboardContainer animated">
+
+		<div class="blackKeyContainer">
+
+
+		<!-- first octave -->
+			
+		<div class="lowC leftSideBorder blackKeySpace"><div class="noteB"></div></div>
+		<div class="lowC blackKeySpace"><div class="noteB"></div></div>
+		<div class="blackKey lowCSharp"><div class="noteB lowCSharpDisp">C# - Db</div></div>
+		<div class="lowD blackKeySpace"><div class="noteB"></div></div>
+		<div class="blackKey lowDSharp"><div class="noteB lowDSharpDisp">D# - Eb</div></div>
+		<div class="lowE blackKeySpace"><div class="noteB"></div></div>
+		<div class="lowE rightSideBorder blackKeySpace"><div class="noteB"></div></div>
+		<div class="lowF leftSideBorder blackKeySpace"><div class="noteB"></div></div>
+		<div class="lowF blackKeySpace"><div class="noteB"></div></div>
+		<div class="blackKey lowFSharp"><div class="noteB lowFSharpDisp">F# - Gb</div></div>
+		<div class="lowG blackKeySpace"><div class="noteB"></div></div>
+		<div class="blackKey lowGSharp"><div class="noteB lowGSharpDisp">G# - Ab</div></div>
+		<div class="lowA blackKeySpace"><div class="noteB"></div></div>
+		<div class="blackKey lowASharp"><div class="noteB lowASharpDisp">A# - Bb</div></div>
+		<div class="lowB blackKeySpace"><div class="noteB"></div></div>
+		<div class="lowB rightSideBorder blackKeySpace"><div class="noteB"></div></div>
+
+
+		<!-- second octave -->
+
+		<div class="midC leftSideBorder blackKeySpace"><div class="noteB"></div></div>
+		<div class="midC blackKeySpace"><div class="noteB"></div></div>
+		<div class="blackKey midCSharp"><div class="noteB midCSharpDisp">C# - Db</div></div>
+		<div class="highD blackKeySpace"><div class="noteB"></div></div>
+		<div class="blackKey highDSharp"><div class="noteB highDSharpDisp">D# - Eb</div></div>
+		<div class="highE blackKeySpace"><div class="noteB"></div></div>
+		<div class="highE rightSideBorder blackKeySpace"><div class="noteB"></div></div>
+		<div class="highF leftSideBorder blackKeySpace"><div class="noteB"></div></div>
+		<div class="highF blackKeySpace"><div class="noteB"></div></div>
+		<div class="blackKey highFSharp"><div class="noteB highFSharpDisp">F# - Gb</div></div>
+		<div class="highG blackKeySpace"><div class="noteB"></div></div>
+		<div class="blackKey highGSharp"><div class="noteB highGSharpDisp">G# - Ab</div></div>
+		<div class="highA blackKeySpace"><div class="noteB"></div></div>
+		<div class="blackKey highASharp"><div class="noteB highASharpDisp">A# - Bb</div></div>
+		<div class="highB blackKeySpace"><div class="noteB"></div></div>
+		<div class="highB rightSideBorder blackKeySpace"><div class="noteB"></div></div>
+
+
+
+
+		</div>
+
+
+
+
+		<div class="whiteKeyContainer">
+
+			<div class="lowC whiteKey"><div class="noteW lowCDisp">C</div></div>
+
+			<div class="lowD whiteKey"><div class="noteW lowDDisp">D</div></div>
+
+			<div class="lowE whiteKey"><div class="noteW lowEDisp">E</div></div>
+
+			<div class="lowF whiteKey"><div class="noteW lowFDisp">F</div></div>
+
+			<div class="lowG whiteKey"><div class="noteW lowGDisp">G</div></div>
+ 
+			<div class="lowA whiteKey"><div class="noteW lowADisp">A</div></div>
+
+			<div class="lowB whiteKey"><div class="noteW lowBDisp">B</div></div>
+ 
+			<div class="midC whiteKey"><div class="noteW midCDisp">C</div></div>
+
+			<div class="highD whiteKey"><div class="noteW highDDisp">D</div></div>
+
+			<div class="highE whiteKey"><div class="noteW highEDisp">E</div></div>
+			
+			<div class="highF whiteKey"><div class="noteW highFDisp">F</div></div>
+
+			<div class="highG whiteKey"><div class="noteW highGDisp">G</div></div>
+
+			<div class="highA whiteKey"><div class="noteW highADisp">A</div></div>
+
+			<div class="highB whiteKey"><div class="noteW highBDisp">B</div></div>
+
+		</div>
+
+	</div>
+
+	<div id="content"></div>
+<div id="content2"></div>
+
+</div>
+
+<button class="btn btn-default dropdown back" type="button">Back</button>
+
+
+
+
+
+
+
+
+
+    <script type="text/jsx">
+    
+        var ChordComponent = React.createClass({
+            render: function() {
+
+
+
+                return (
+
+
+                        <h2>{this.props.chord} likes to eat {this.props.food}</h2>
+
+                );
+            }
+        });
+
+        React.render(<div>
+	                    <ChordComponent chord="C" food="Bacon" />
+	                    <ChordComponent chord="Sally" food="Tuna" />
+	                    <ChordComponent chord="Emily" food="Beef" />
+	                    <ChordComponent chord="Tony" food="Ham" />
+	                </div>, 
+
+	                document.getElementById('content'));
+
+
+
+	    var BuckysComponent = React.createClass({
+            doSomething: function() {
+                alert("The text displaying is: " + this.props.children);
+            },
+            render: function() {
+                return(
+                        <div>
+                            <h3>{this.props.user}</h3>
+                            <a onClick={this.doSomething} href="#" >Click me</a>
+                        </div>
+                );
+            }
+        });
+
+        React.render(
+                <div>
+                    <BuckysComponent user="Bucky">This guy is awesome</BuckysComponent>
+                    <BuckysComponent user="Emily">She smells like mints</BuckysComponent>
+                </div>,
+                document.getElementById('content2')
+        );
+
+    </script>
+
+
+
+
+
+</body>
+</html>
+
+

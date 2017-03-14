@@ -1,0 +1,190 @@
+.container{
+
+	/*background-color: blue;*/
+    height: 100%;
+    width: 100%;
+    min-width: 100%;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+    position: fixed;
+    margin: 0 auto;
+}
+
+
+
+
+.keyboardContainer{
+
+	margin-left: 10%;
+	margin-right: 10%;
+	margin-top: 10%;
+	width: 80%;
+	height: 40%;
+	border: solid black 3px;
+	border-radius: 5px;
+}
+
+
+.keyboardContainer:hover {
+
+	cursor:pointer;
+
+
+}
+
+.blackKeyContainer{
+
+	width: 100%;
+	height: 60%;
+	/*border: solid blue 1px;*/
+	position: relative;
+	/*z-index: 1;*/
+	margin: 0 auto;
+}
+
+
+.blackKeySpace{
+
+
+	width: 2.382%;
+	height: 100%;
+	/*border: solid purple 1px;*/
+	display: inline-block;
+	float: left;
+}
+
+
+.blackKey{
+
+	width: 4.76%;
+	height: 100%;
+	/*border: solid red 1px;*/
+	display: inline-block;
+
+	float: left;
+	background-color: black;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	position: relative;
+	color: white;
+	line-height: 300%;
+	white-space: pre-wrap;
+
+}
+
+
+.noteB{
+
+	height: auto;
+	width: auto;
+	/*outline: solid green 1px;*/
+	position: absolute;
+	bottom: 0;
+	display: none;
+
+
+	/*font size for keys with centering*/
+
+	left: 15%;
+	right: 15%;
+	font-size: 200%;
+
+}
+
+.whiteKeyContainer{
+
+	
+	width: 100%;
+	height: 40%;
+	/*border: solid black 1px;
+	border-radius: 5px;*/
+	position: static;
+	/*z-index: -1;*/
+}
+
+.whiteKey{
+
+	width: 7.142%;
+	height: 100%;
+	display: inline-block;
+	float: left;
+	border-left: solid black 1px;
+	border-right: solid black 1px;
+
+	/*outline: solid black 1px;*/
+	line-height: 500%;
+	position: relative;
+	color: black;
+	
+}
+
+
+
+.noteW{
+
+	height: auto;
+	width: auto;
+	/*outline: solid green 1px;*/
+	position: absolute;
+	bottom: 0;
+	display: none;
+
+
+	/*font size for keys with centering*/
+
+	left: 35%;
+	right: 35%;
+	font-size: 200%;
+
+}
+
+.rightSideBorder{
+
+	border-right: solid black 1px;: 
+
+
+}
+
+
+.leftSideBorder{
+
+	border-left: solid black 1px;: 
+
+
+}
+
+
+.moveDown{
+
+	bottom: -50%;
+
+
+}
+
+
+.dropdown{
+
+
+	float: right;
+}
+
+
+#content{
+
+	width: 400px;
+	height: 300px;
+	border: solid black 1px;
+	display: fixed;
+
+}
+
+#content2{
+
+	width: 400px;
+	height: 300px;
+	border: solid red 1px;
+	display: relative;
+	z-index: 4;
+
+}
