@@ -131,12 +131,27 @@
 
 	</div>
 
-	<div id="content"></div>
-<div id="content2"></div>
+	<div id="content" class="animated">
+		
+
+
+
+
+
+
+
+
+
+	</div>
+
 
 </div>
 
 <button class="btn btn-default dropdown back" type="button">Back</button>
+
+
+
+<!-- <div id="content2"></div> -->
 
 
 
@@ -147,37 +162,21 @@
 
 
     <script type="text/jsx">
+
+
+    	
     
-        var ChordComponent = React.createClass({
+        var BuckysComponent = React.createClass({
+
+
+        	
+
+
+        	
+
+           
             render: function() {
 
-
-
-                return (
-
-
-                        <h2>{this.props.chord} likes to eat {this.props.food}</h2>
-
-                );
-            }
-        });
-
-        React.render(<div>
-	                    <ChordComponent chord="C" food="Bacon" />
-	                    <ChordComponent chord="Sally" food="Tuna" />
-	                    <ChordComponent chord="Emily" food="Beef" />
-	                    <ChordComponent chord="Tony" food="Ham" />
-	                </div>, 
-
-	                document.getElementById('content'));
-
-
-
-	    var BuckysComponent = React.createClass({
-            doSomething: function() {
-                alert("The text displaying is: " + this.props.children);
-            },
-            render: function() {
                 return(
                         <div>
                             <h3>{this.props.user}</h3>
@@ -190,9 +189,8 @@
         React.render(
                 <div>
                     <BuckysComponent user="Bucky">This guy is awesome</BuckysComponent>
-                    <BuckysComponent user="Emily">She smells like mints</BuckysComponent>
                 </div>,
-                document.getElementById('content2')
+                document.getElementById('content')
         );
 
     </script>

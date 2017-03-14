@@ -292,6 +292,7 @@
 
 
  				$(".keyboardContainer").removeClass(animation);
+ 				$("#content").removeClass("fadeOut");
 
 
 
@@ -308,6 +309,10 @@
 
                 $(".keyboardContainer").addClass(animation);
 
+
+                $("#content").show();
+                $("#content").addClass("fadeIn");
+
                 
 
 
@@ -321,6 +326,7 @@
 
 
  				$(".keyboardContainer").removeClass(animation);
+ 				$("#content").removeClass("fadeIn");
 
 
  				$(".keyboardContainer").animate({
@@ -336,8 +342,92 @@
                 } , 600);
 
  				$(".keyboardContainer").addClass(animation);
+
+
+ 				$("#content").hide();
+ 				$("#content").addClass("fadeOut");
 			
 				});
+
+
+ 		// shows content
+
+ 			var chord
+
+ 			$('.cChord').click(function(){
+
+
+        		chord = "C";
+        		console.log(chord);
+
+
+
+        	});
+
+        	$('.dChord').click(function(){
+
+
+        		chord = "D";
+        		console.log(chord);
+
+
+
+        	});
+
+        	$('.eChord').click(function(){
+
+
+        		chord = "E";
+        		console.log(chord);
+
+
+
+        	});
+
+        	$('.fChord').click(function(){
+
+
+        		chord = "F";
+        		console.log(chord);
+
+
+
+        	});
+
+        	$('.gChord').click(function(){
+
+
+        		chord = "G";
+        		console.log(chord);
+
+
+
+        	});
+
+
+        	$('.aChord').click(function(){
+
+
+        		chord = "A";
+        		console.log(chord);
+
+
+
+        	});
+
+        	$('.bChord').click(function(){
+
+
+        		chord = "B";
+        		console.log(chord);
+
+
+
+        	});
+
+
+
+
 
         
     });

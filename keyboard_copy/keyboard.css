@@ -172,10 +172,11 @@
 
 #content{
 
-	width: 400px;
-	height: 300px;
+	width: 90%;
+	height: 50%;
+	margin: 2% 0 0 6%;
 	border: solid black 1px;
-	display: fixed;
+	display: none;
 
 }
 
