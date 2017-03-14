@@ -317,8 +317,8 @@
 
 	 				$(".keyboardContainer").animate({
 
-	                "margin-left": "60%",
-	                "margin-top": "3%",
+	                "margin-left": "58%",
+	                "margin-top": "6%",
 	                height: "25%",
 	                width: "40%",
 	                "font-size": "50%",
@@ -391,9 +391,12 @@
 
  				name= "."+ n +"Major"
 
+
+ 				capN = n.toUpperCase();
+
 		
-		
-		
+				$(".Chordname").html(capN + " Major")
+			
 			
 
 			for(let i=0;i<Maj(n).length;i++){
@@ -405,9 +408,9 @@
 					//$('.low'+Maj(n)[i].toUpperCase()+'Disp').show()
 					//$('.high'+Maj(n)[i].toUpperCase()+'Disp').show()
 					if(i>0){
-						$(clsnm).css("background-color","hotpink");
+						$(clsnm).css("background-color","#ff4081");
 					}else{
-						$(clsnm).css("background-color","blue")
+						$(clsnm).css("background-color","#1e88e5")
 					}
 
 				}, i*500)
