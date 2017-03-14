@@ -14,6 +14,40 @@
 
 
 
+
+.brand{
+
+
+	width: 30%;
+	height: 18%;
+	left: 5%;
+	top: 1%;
+	background-image: url("Untitled.jpg");
+	background-size: contain;
+	background-repeat: no-repeat;
+	position: absolute;
+	z-index: -1;
+	
+	
+	/*font-family: 'Bubblegum Sans', cursive;*/
+	
+
+	/*outline: solid black 1px;*/
+
+
+}
+
+
+
+#notePic{
+
+
+	
+	
+
+}
+
+
 .keyboardContainer{
 
 	margin-left: 10%;
