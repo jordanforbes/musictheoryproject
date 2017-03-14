@@ -2,6 +2,25 @@
 	var animation = "jello"
 
 
+	function reset(){
+		$(".blackKey").css("background-color","black")
+		$(".whiteKey").css("background-color","white")
+		$(".blackKeySpace").css("background-color","white")
+
+	}
+
+
+
+	function displayVals() {
+	  	var rootNote = $( "#rootnoteselect" ).val();
+		var chordType= $("#chordtypeselect").val();
+	 	func= chordType + "(rootNote)"
+
+	  	eval(func)
+	 
+	}
+
+
 	$(document).ready(function() {
 
 
@@ -294,24 +313,26 @@
  				$(".keyboardContainer").removeClass(animation);
  				$("#content").removeClass("fadeOut");
 
+ 				setTimeout(function() {
+
+	 				$(".keyboardContainer").animate({
+
+	                "margin-left": "60%",
+	                "margin-top": "3%",
+	                height: "25%",
+	                width: "40%",
+	                "font-size": "50%",
 
 
- 				$(".keyboardContainer").animate({
+	                } , 600);
 
-                "margin-left": "60%",
-                "margin-top": "3%",
-                height: "25%",
-                width: "40%",
-                "font-size": "50%",
+	                $(".keyboardContainer").addClass(animation);
 
 
-                } , 600);
+	                $("#content").show();
+	                $("#content").addClass("fadeIn")},
 
-                $(".keyboardContainer").addClass(animation);
-
-
-                $("#content").show();
-                $("#content").addClass("fadeIn");
+	                2*1000)
 
                 
 
@@ -329,6 +350,7 @@
  				$("#content").removeClass("fadeIn");
 
 
+
  				$(".keyboardContainer").animate({
 
                 "margin-left": "10%",
@@ -341,6 +363,8 @@
 
                 } , 600);
 
+                reset();
+
  				$(".keyboardContainer").addClass(animation);
 
 
@@ -352,78 +376,52 @@
 
  		// shows content
 
- 			var chord
-
- 			$('.cChord').click(function(){
+ 			var n
 
 
-        		chord = "C";
-        		console.log(chord);
+ 			$('.dropChord').click(function(){
 
 
 
-        	});
-
-        	$('.dChord').click(function(){
+ 				n = $(this).text().toLowerCase();
 
 
-        		chord = "D";
-        		console.log(chord);
+ 				console.log(n);
 
 
+ 				name= "."+ n +"Major"
 
-        	});
+		
+		
+		
+			
 
-        	$('.eChord').click(function(){
-
-
-        		chord = "E";
-        		console.log(chord);
-
-
-
-        	});
-
-        	$('.fChord').click(function(){
-
-
-        		chord = "F";
-        		console.log(chord);
+			for(i=0;i<Maj(n).length;i++){
+				clsnm= "."+Maj(n)[i]+"note"
+				console.log(clsnm)
+				//$('.low'+Maj(n)[i].toUpperCase()+'Disp').show()
+				//$('.high'+Maj(n)[i].toUpperCase()+'Disp').show()
+				if(i>0){
+					$(clsnm).css("background-color","hotpink");
+				}else{
+					$(clsnm).css("background-color","blue")
 
 
+				}
+				
 
-        	});
+			}
 
-        	$('.gChord').click(function(){
+		
 
-
-        		chord = "G";
-        		console.log(chord);
+		console.log(name)
 
 
 
-        	});
 
+ 			})
 
-        	$('.aChord').click(function(){
-
-
-        		chord = "A";
-        		console.log(chord);
-
-
-
-        	});
-
-        	$('.bChord').click(function(){
-
-
-        		chord = "B";
-        		console.log(chord);
-
-
-
-        	});
+ 			
 
 
 
