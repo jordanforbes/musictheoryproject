@@ -55,7 +55,7 @@ function noteFinder(n,modeName,chord){
     element=element+x+12
  
   }
-
+return scaleArr
   });
     //chord notes finder
   if(chord != undefined){
@@ -68,8 +68,8 @@ function noteFinder(n,modeName,chord){
     })
       finArr= chordArr
     }else{
-      console.log(n.toUpperCase() + " "+ modeName + " scale")
-      console.log(scaleArr)
+      return " <strong>"+modeName[7] +"</strong> "+ scaleArr+" "
+      //return scaleArr
     }
   
 }

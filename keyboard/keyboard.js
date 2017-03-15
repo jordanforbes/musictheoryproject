@@ -17,6 +17,17 @@ function reset(){
 
 $(document).ready(function() {
 
+	$('.vomit').html(function(){
+		
+		//return noteFinder(notes[0],scale[0])
+		for(i=0;i<12;i++){
+			$(".vomit").append("<strong>"+notes[i].toUpperCase()+"</strong>")
+			for(j=0;j<7;j++){
+				$('.vomit').append(noteFinder(notes[i],scale[j]).toString()+" ")
+			}
+		}	
+	
+	})
  
 	$( "select" ).change( displayVals );
 	
