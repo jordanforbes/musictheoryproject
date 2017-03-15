@@ -14,20 +14,18 @@ function reset(){
 	 
 	}
 
-	
+
+
 function noteSearch(arr){
 
 	stArr=[]
 		
-
+console.log(arr.length)
 		$('.vomit').html(function(){
 			
-			
-			stArr.push(notes.indexOf(arr[0]))
-			
-			stArr.push(notes.indexOf(arr[1]))
-		
-			stArr.push(notes.indexOf(arr[2]))
+			for(u=0;u<arr.length;u++){
+				stArr.push(notes.indexOf(arr[u]))
+			}
 			
 
 			$(this).append("<br> <h3>scales featuring</h3> ")
@@ -39,12 +37,7 @@ function noteSearch(arr){
 			for(i=0;i<12;i++){
 				$(this).append("<br> <strong> "+notes[i].toUpperCase()+":</strong> ")
 				for(k=0;k<7;k++){
-					if(noteFinder(notes[i],scale[k]).indexOf(notes[stArr[0]])>=0 &&
-						noteFinder(notes[i],scale[k]).indexOf(notes[stArr[1]])>=0 &&
-						noteFinder(notes[i],scale[k]).indexOf(notes[stArr[2]])>=0
-						){
-						$(this).append("<br><strong>"+scale[k][7]+":</strong> ["+noteFinder(notes[i],scale[k])+"] ")
-					}
+					ScaleReader(k,i,arr)
 				}$(this).append("<br>")
 			
 			}
@@ -55,7 +48,7 @@ function noteSearch(arr){
 
 $(document).ready(function() {
 
-	noteSearch(["cs","g","f"])
+	noteSearch(["c","d","e","f"])
  
 	$( "select" ).change( displayVals );
 	
