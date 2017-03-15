@@ -20,7 +20,7 @@ function noteSearch(arr){
 
 	stArr=[]
 		
-console.log(arr.length)
+
 		$('.vomit').html(function(){
 			
 			for(u=0;u<arr.length;u++){
@@ -34,10 +34,12 @@ console.log(arr.length)
 				$(this).append("<strong>"+arr[h].toUpperCase()+"</> ")
 			}
 			$(this).append("<br>")
-			for(i=0;i<12;i++){
+			for(i=0;i<notes.length;i++){
 				$(this).append("<br> <strong> "+notes[i].toUpperCase()+":</strong> ")
-				for(k=0;k<7;k++){
-					ScaleReader(k,i,arr)
+				for(k=0;k<scale.length;k++){
+
+					ScaleReader(k,i,arr,stArr)
+
 				}$(this).append("<br>")
 			
 			}
@@ -48,7 +50,7 @@ console.log(arr.length)
 
 $(document).ready(function() {
 
-	noteSearch(["c","d","e","f"])
+	noteSearch(["c","d","g","f"])
  
 	$( "select" ).change( displayVals );
 	
