@@ -68,7 +68,7 @@ return scaleArr
     })
       finArr= chordArr
     }else{
-      return " <strong>"+modeName[7] +"</strong> "+ scaleArr+" "
+      return scaleArr
       //return scaleArr
     }
   

@@ -5,7 +5,8 @@ function reset(){
 	}
 
 	function displayVals() {
-	  var rootNote = $( "#rootnoteselect" ).val();
+	  var rootNote = $( "#rootnoteselect" ).val().toString();
+	noteSearch(rootNote)
 		var chordType= $("#chordtypeselect").val();
 	 func= chordType + "(rootNote)"
 
@@ -14,20 +15,34 @@ function reset(){
 	}
 
 	
+function noteSearch(arr){
+
+	for(p=0;p<arr.length;p++){
+		var n =arr[p].toString()
+
+		$('.vomit').html(function(){
+			
+			console.log(n)
+			var x=notes.indexOf(n)
+
+			$(this).append("<br> <h3>scales featuring "+n.toUpperCase()+"</h3><br>")
+			for(i=0;i<12;i++){
+				$(this).append("<br> <strong> "+notes[i].toUpperCase()+":</strong> ")
+				for(k=0;k<7;k++){
+					if(noteFinder(notes[i],scale[k]).indexOf(notes[x])>=0){
+						$(this).append("<br><strong>"+scale[k][7]+":</strong> ["+noteFinder(notes[i],scale[k])+"] ")
+					}
+				}$(this).append("<br>")
+			
+			}
+		})
+	}
+}
+
 
 $(document).ready(function() {
 
-	$('.vomit').html(function(){
-		
-		//return noteFinder(notes[0],scale[0])
-		for(i=0;i<12;i++){
-			$(".vomit").append("<strong>"+notes[i].toUpperCase()+"</strong>")
-			for(j=0;j<7;j++){
-				$('.vomit').append(noteFinder(notes[i],scale[j]).toString()+" ")
-			}
-		}	
-	
-	})
+	noteSearch(["d","c"])
  
 	$( "select" ).change( displayVals );
 	
