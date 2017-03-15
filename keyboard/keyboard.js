@@ -17,19 +17,32 @@ function reset(){
 	
 function noteSearch(arr){
 
-	for(p=0;p<arr.length;p++){
-		var n =arr[p].toString()
+	stArr=[]
+		
 
 		$('.vomit').html(function(){
 			
-			console.log(n)
-			var x=notes.indexOf(n)
+			
+			stArr.push(notes.indexOf(arr[0]))
+			
+			stArr.push(notes.indexOf(arr[1]))
+		
+			stArr.push(notes.indexOf(arr[2]))
+			
 
-			$(this).append("<br> <h3>scales featuring "+n.toUpperCase()+"</h3><br>")
+			$(this).append("<br> <h3>scales featuring</h3> ")
+
+			for(h=0;h<arr.length;h++){
+				$(this).append("<strong>"+arr[h].toUpperCase()+"</> ")
+			}
+			$(this).append("<br>")
 			for(i=0;i<12;i++){
 				$(this).append("<br> <strong> "+notes[i].toUpperCase()+":</strong> ")
 				for(k=0;k<7;k++){
-					if(noteFinder(notes[i],scale[k]).indexOf(notes[x])>=0){
+					if(noteFinder(notes[i],scale[k]).indexOf(notes[stArr[0]])>=0 &&
+						noteFinder(notes[i],scale[k]).indexOf(notes[stArr[1]])>=0 &&
+						noteFinder(notes[i],scale[k]).indexOf(notes[stArr[2]])>=0
+						){
 						$(this).append("<br><strong>"+scale[k][7]+":</strong> ["+noteFinder(notes[i],scale[k])+"] ")
 					}
 				}$(this).append("<br>")
@@ -37,12 +50,12 @@ function noteSearch(arr){
 			}
 		})
 	}
-}
+
 
 
 $(document).ready(function() {
 
-	noteSearch(["d","c"])
+	noteSearch(["cs","g","f"])
  
 	$( "select" ).change( displayVals );
 	
