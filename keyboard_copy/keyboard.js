@@ -1,6 +1,8 @@
 
 	var animation = "jello"
 
+	var tester 
+
 
 	function reset(){
 		$(".blackKey").css("background-color","black")
@@ -181,127 +183,25 @@
       $(".dropdown-toggle").dropdown("toggle");
 
 
+      // shows chords on hover
 
-      // chords
+      $('.dropChord').hover(function(){
+      		for(i=0;i<12;i++){
+      				if($(".note"+i).is(':hover')==true){
+      					$('.displayAbs'+((i%24).toString())).show();
+						$('.displayAbs'+(((i+4)%24).toString())).show();
+						$('.displayAbs'+(((i+7)%24).toString())).show();
+						$('.displayAbs'+(((i+12)%24).toString())).show();
+						$('.displayAbs'+(((i+16)%24).toString())).show();
+						$('.displayAbs'+(((i+19)%24).toString())).show();
+      				}
+      		}		
+		},function(){
+				for(i=0;i<24;i++){
+	      			$('.displayAbs'+((i%24).toString())).hide();	
+	      		}
+		});
 
-      $('.cChord').hover(function(){
-				$('.lowCDisp').show();
-				$('.lowEDisp').show();
-				$('.lowGDisp').show();
-				$('.midCDisp').show();
-				$('.highEDisp').show();
-				$('.highGDisp').show();
-
-			},function(){
-				$('.lowCDisp').hide();
-				$('.lowEDisp').hide();
-				$('.lowGDisp').hide();
-				$('.midCDisp').hide();
-				$('.highEDisp').hide();
-				$('.highGDisp').hide();
-				});
-
-      $('.dChord').hover(function(){
-				$('.lowDDisp').show();
-				$('.lowFSharpDisp').show();
-				$('.lowADisp').show();
-				$('.highDDisp').show();
-				$('.highFSharpDisp').show();
-				$('.highADisp').show();
-
-			},function(){
-				$('.lowDDisp').hide();
-				$('.lowFSharpDisp').hide();
-				$('.lowADisp').hide();
-				$('.highDDisp').hide();
-				$('.highFSharpDisp').hide();
-				$('.highADisp').hide();
-				});
-
-       $('.eChord').hover(function(){
-				$('.lowEDisp').show();
-				$('.lowGSharpDisp').show();
-				$('.lowBDisp').show();
-				$('.highEDisp').show();
-				$('.highGSharpDisp').show();
-				$('.highBDisp').show();
-
-			},function(){
-				$('.lowEDisp').hide();
-				$('.lowGSharpDisp').hide();
-				$('.lowBDisp').hide();
-				$('.highEDisp').hide();
-				$('.highGSharpDisp').hide();
-				$('.highBDisp').hide();
-				});
-
-       $('.fChord').hover(function(){
-				$('.lowCDisp').show();
-				$('.lowFDisp').show();
-				$('.lowADisp').show();
-				$('.midCDisp').show();
-				$('.highFDisp').show();
-				$('.highADisp').show();
-
-			},function(){
-				$('.lowCDisp').hide();
-				$('.lowFDisp').hide();
-				$('.lowADisp').hide();
-				$('.midCDisp').hide();
-				$('.highFDisp').hide();
-				$('.highADisp').hide();
-				});
-
-       $('.gChord').hover(function(){
-				$('.lowDDisp').show();
-				$('.lowGDisp').show();
-				$('.lowBDisp').show();
-				$('.highDDisp').show();
-				$('.highGDisp').show();
-				$('.highBDisp').show();
-
-			},function(){
-				$('.lowDDisp').hide();
-				$('.lowGDisp').hide();
-				$('.lowBDisp').hide();
-				$('.highDDisp').hide();
-				$('.highGDisp').hide();
-				$('.highBDisp').hide();
-				});
-
- 		$('.aChord').hover(function(){
-				$('.lowCSharpDisp').show();
-				$('.lowEDisp').show();
-				$('.lowADisp').show();
-				$('.midCSharpDisp').show();
-				$('.highEDisp').show();
-				$('.highADisp').show();
-
-			},function(){
-				$('.lowCSharpDisp').hide();
-				$('.lowEDisp').hide();
-				$('.lowADisp').hide();
-				$('.midCSharpDisp').hide();
-				$('.highEDisp').hide();
-				$('.highADisp').hide();
-				});
-
- 		$('.bChord').hover(function(){
-				$('.lowDSharpDisp').show();
-				$('.lowFSharpDisp').show();
-				$('.lowBDisp').show();
-				$('.highDSharpDisp').show();
-				$('.highFSharpDisp').show();
-				$('.highBDisp').show();
-
-			},function(){
-				$('.lowDSharpDisp').hide();
-				$('.lowFSharpDisp').hide();
-				$('.lowBDisp').hide();
-				$('.highDSharpDisp').hide();
-				$('.highFSharpDisp').hide();
-				$('.highBDisp').hide();
-				});
 
 
  		// moves keyboard
@@ -394,8 +294,41 @@
 
  				capN = n.toUpperCase();
 
+
+ 				var first, third, fifth
+
+ 				
+
+ 				if(Maj(n)[0].length==2){
+ 					first = (Maj(n)[0][0]).toUpperCase()+"#"
+ 				}else{
+ 					first = (Maj(n)[0][0]).toUpperCase()	
+ 				}
+
+ 				if(Maj(n)[1].length==2){
+ 					third = (Maj(n)[1][0]).toUpperCase()+"#"
+ 				}else{
+ 					third = (Maj(n)[1][0]).toUpperCase()	
+ 				}
+
+ 				if(Maj(n)[2].length==2){
+ 					fifth = (Maj(n)[2][0]).toUpperCase()+"#"
+ 				}else{
+ 					fifth = (Maj(n)[2][0]).toUpperCase()	
+ 				}
+
 		
 				$(".Chordname").html(capN + " Major")
+
+				$(".rootNote").html(first)
+
+				$(".thirdNote").html(third)
+
+				$(".fifthNote").html(fifth)
+
+
+
+
 			
 			
 

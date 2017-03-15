@@ -279,7 +279,7 @@
 #content{
 
 	width: 90%;
-	height: auto;
+	height: 60%;
 	margin: 0% 0 0 6%;
 	border: solid black 1px;
 	display: none;
@@ -288,11 +288,12 @@
 
 #content2{
 
-	width: 400px;
-	height: 300px;
+	width: 97%;
+	height: 85%;
 	border: solid red 1px;
 	display: relative;
 	z-index: 4;
+	margin-left: 1%;
 
 }
 
