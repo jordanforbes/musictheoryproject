@@ -16,18 +16,6 @@
 
 
 .brand{
-
-/*
-	width: 30%;
-	height: 18%;
-	left: 5%;
-	top: 1%;
-	background-image: url("Untitled.jpg");
-	background-size: contain;
-	background-repeat: no-repeat;
-	position: absolute;
-	z-index: -1;*/
-	
 	
 	/*font-family: 'Bubblegum Sans', cursive;*/
 	
@@ -41,8 +29,9 @@
 .navbar-brand{
 
 
-	background-image: url("https://lh3.googleusercontent.com/32wXOByV5AiXHpwx_xjQmjcRuAtQ4RqoCDsa09kNdC577S6DMPvHWMU2Y1v-CEpY2a7V=w300");
-	/*width: 50%;*/
+	/*background-image: url("https://lh3.googleusercontent.com/32wXOByV5AiXHpwx_xjQmjcRuAtQ4RqoCDsa09kNdC577S6DMPvHWMU2Y1v-CEpY2a7V=w300");*/
+	
+	background-image: url("mdnote03.png");
 	background-size: contain;
 	background-repeat: no-repeat;
 	color: white! important;
@@ -261,17 +250,29 @@
 
 .dropdownContainer{
 
-	right: 10%;
+	right: 5%;
 	position: absolute;
 	top: 10%;
+	width: 50%;
+	/*border: solid black 1px;*/
+/*	width: auto;
+	max-height: 30%;*/
 
 }
 
 
-.dropdown{
+.dropdown1{
 
 
-	
+	display: inline;
+	margin-left: 40%;
+}
+
+.dropdown2{
+
+
+	/*display: inline;*/
+	float: right;
 
 }
 
