@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Key Party</title>
+
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+	<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+	
+
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/4.0.2/bootstrap-material-design.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/4.0.2/bootstrap-material-design.iife.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/4.0.2/bootstrap-material-design.umd.min.js"></script>
+	
+
+
+
+	<link href="https://fonts.googleapis.com/css?family=Bubblegum+Sans" rel="stylesheet">
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/JSXTransformer.js"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/JSXTransformer.js"></script>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+  	<script type="text/javascript" src="keyboard.js"></script>
+  	<script type="text/javascript" src="musicFunctions.js"></script>
+  	<link rel="stylesheet" type="text/css" href="keyboard.css">
+
+  	
+</head>
+<body>
+
+
+<nav class="navbar navbar-light" style="background-color: #1e88e5;">
+  <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar2" aria-controls="exCollapsingNavbar2" aria-expanded="false" aria-label="Toggle navigation">
+    &#9776;
+  </button>
+  <div class="collapse navbar-toggleable-xs navEdit" id="exCollapsingNavbar2">
+    <div class="navbar-brand" href="#">&nbsp &nbsp Key Party</div>
+    <ul class="nav navbar-nav navMove">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Features</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#"></a>
+      </li>
+    </ul>
+   
+  </div>
+
+
+
+  <div class="dropdownContainer">
+
+  		<div class="dropdown1">
+		    <button class="btn btn-default dropdown mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type="button" data-toggle="dropdown">Major / Minor
+		    <span class="caret"></span></button>
+		    <ul class="dropdown-menu">
+		      <li><a href="#" class="majMinDrop majorDrop">Major</a></li>
+		      <li><a href="#" class="majMinDrop minorDrop">Minor</a></li>
+		    </ul>
+	   </div>
+
+	   &nbsp
+
+	   &nbsp
+
+	   <div class="dropdown2">
+		    <button class="btn btn-default dropdown mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type="button" data-toggle="dropdown">Choose a <span class="maMi"></span> chord
+		    <span class="caret"></span></button>
+		    <ul class="dropdown-menu">
+		      <li><a href="#" class="dropChord cChord note0">C</a></li>
+		      <li><a href="#" class="dropChord csChord note1">C#</a></li>
+		      <li><a href="#" class="dropChord dChord note2">D</a></li>
+		      <li><a href="#" class="dropChord dsChord note3">D#</a></li>
+		      <li><a href="#" class="dropChord eChord note4">E</a></li>
+		      <li><a href="#" class="dropChord fChord note5">F</a></li>
+		      <li><a href="#" class="dropChord fsChord note6">F#</a></li>
+		      <li><a href="#" class="dropChord gChord note7">G</a></li>
+		      <li><a href="#" class="dropChord gsChord note8">G#</a></li>
+		      <li><a href="#" class="dropChord aChord note9">A</a></li>
+		      <li><a href="#" class="dropChord asChord note10">A#</a></li>
+		      <li><a href="#" class="dropChord bChord note11">B</a></li>
+		    </ul>
+	   </div>
+
+  </div>
+
+</nav>
+
+<div class="seperatorBar"></div>
+
+<div class="container">
+
+
+	<div class="brand"></div>
+ 
+
+	
+
+	<div class="keyboardContainer animated">
+
+		<div class="blackKeyContainer">
+
+
+		<!-- first octave -->
+			
+		<div class="cnote lowC abs0 leftSideBorder blackKeySpace"><div class="noteB"></div></div>
+		<div class="cnote lowC abs0 blackKeySpace"><div class="noteB"></div></div>
+		<div class="csnote blackKey abs1 lowCSharp"><div class="noteB lowCSharpDisp displayAbs1">C# - Db</div></div>
+		<div class="dnote lowD abs2 blackKeySpace"><div class="noteB"></div></div>
+		<div class="dsnote blackKey abs3 lowDSharp"><div class="noteB lowDSharpDisp displayAbs3">D# - Eb</div></div>
+		<div class="enote lowE abs4 blackKeySpace"><div class="noteB"></div></div>
+		<div class="enote lowE abs4 rightSideBorder blackKeySpace"><div class="noteB"></div></div>
+		<div class="fnote lowF abs5 leftSideBorder blackKeySpace"><div class="noteB"></div></div>
+		<div class="fnote lowF abs5 blackKeySpace"><div class="noteB"></div></div>
+		<div class="fsnote blackKey abs6 lowFSharp"><div class="noteB lowFSharpDisp displayAbs6">F# - Gb</div></div>
+		<div class="gnote lowG abs7 blackKeySpace"><div class="noteB"></div></div>
+		<div class="gsnote blackKey abs8 lowGSharp"><div class="noteB lowGSharpDisp displayAbs8">G# - Ab</div></div>
+		<div class="anote lowA abs9 blackKeySpace"><div class="noteB"></div></div>
+		<div class="asnote blackKey abs10 lowASharp"><div class="noteB lowASharpDisp displayAbs10">A# - Bb</div></div>
+		<div class="bnote lowB abs11 blackKeySpace"><div class="noteB"></div></div>
+		<div class="bnote lowB rightSideBorder abs11 blackKeySpace"><div class="noteB"></div></div>
+
+
+		<!-- second octave -->
+
+		<div class="cnote midC leftSideBorder abs12 blackKeySpace"><div class="noteB"></div></div>
+		<div class="cnote midC abs12 blackKeySpace"><div class="noteB"></div></div>
+		<div class="csnote blackKey abs13 midCSharp"><div class="noteB midCSharpDisp displayAbs13">C# - Db</div></div>
+		<div class="dnote highD abs14 blackKeySpace"><div class="noteB"></div></div>
+		<div class="dsnote blackKey abs15 highDSharp"><div class="noteB highDSharpDisp displayAbs15">D# - Eb</div></div>
+		<div class="enote highE abs16 blackKeySpace"><div class="noteB"></div></div>
+		<div class="enote highE rightSideBorder abs16 blackKeySpace"><div class="noteB"></div></div>
+		<div class="fnote highF leftSideBorder abs17 blackKeySpace"><div class="noteB"></div></div>
+		<div class="fnote highF abs17 blackKeySpace"><div class="noteB"></div></div>
+		<div class="fsnote blackKey abs18 highFSharp"><div class="noteB highFSharpDisp displayAbs18">F# - Gb</div></div>
+		<div class="gnote highG abs19 blackKeySpace"><div class="noteB"></div></div>
+		<div class="gsnote blackKey abs20 highGSharp"><div class="noteB highGSharpDisp displayAbs20">G# - Ab</div></div>
+		<div class="anote highA abs21 blackKeySpace"><div class="noteB"></div></div>
+		<div class="asnote blackKey abs22 highASharp"><div class="noteB highASharpDisp displayAbs22">A# - Bb</div></div>
+		<div class="bnote highB abs23 blackKeySpace"><div class="noteB"></div></div>
+		<div class="bnote highB rightSideBorder abs23 blackKeySpace"><div class="noteB"></div></div>
+
+
+
+
+		</div>
+
+
+
+
+		<div class="whiteKeyContainer">
+
+			<div class="cnote lowC abs0 whiteKey"><div class="noteW lowCDisp displayAbs0">C</div></div>
+
+			<div class="dnote lowD abs2 whiteKey"><div class="noteW lowDDisp displayAbs2">D</div></div>
+ 
+			<div class="enote lowE abs4 whiteKey"><div class="noteW lowEDisp displayAbs4">E</div></div>
+
+			<div class="fnote lowF abs6 whiteKey"><div class="noteW lowFDisp displayAbs5">F</div></div>
+
+			<div class="gnote lowG abs7 whiteKey"><div class="noteW lowGDisp displayAbs7">G</div></div>
+ 
+			<div class="anote lowA abs9 whiteKey"><div class="noteW lowADisp displayAbs9">A</div></div>
+
+			<div class="bnote lowB abs11 whiteKey"><div class="noteW lowBDisp displayAbs11">B</div></div>
+ 
+			<div class="cnote midC abs12 whiteKey"><div class="noteW midCDisp displayAbs12">C</div></div>
+
+			<div class="dnote highD abs14 whiteKey"><div class="noteW highDDisp displayAbs14">D</div></div>
+
+			<div class="enote highE abs16 whiteKey"><div class="noteW highEDisp displayAbs16">E</div></div>
+			
+			<div class="fnote highF abs17 whiteKey"><div class="noteW highFDisp displayAbs17">F</div></div>
+
+			<div class="gnote highG abs19 whiteKey"><div class="noteW highGDisp displayAbs19">G</div></div>
+
+			<div class="anote highA abs21 whiteKey"><div class="noteW highADisp displayAbs21">A</div></div>
+
+			<div class="bnote highB abs23 whiteKey"><div class="noteW highBDisp 23">B</div></div>
+
+		</div>
+
+	</div>
+
+	<div id="content" class="animated">
+
+		<h1 class="Chordname"></h1>
+
+		<div id="content2">
+
+
+			<li>The <span class="Chordname"></span> scale is <span class="noteScaleClass"></span></li>
+
+			<li><span>The <span class="Chordname"></span> triad consists of the root note <span class="rootNote"></span>, the <span class="thirdClass"></span> third note <span class="thirdNote"></span>, and the fifth note <span class="fifthNote"></span> on the <span class="maMiClass"></span> scale.</span></li>
+
+		</div>
+
+	</div>
+
+</div>
+
+<button class="btn btn-default dropdown back" type="button">Back</button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>
+
+
