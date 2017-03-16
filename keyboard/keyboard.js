@@ -2,11 +2,14 @@ function reset(){
 		$(".blackKey").css("background-color","black")
 		$(".whiteKey").css("background-color","white")
 		$(".blackKeySpace").css("background-color","white")
+		notArr=[]
+		$(".vomit").empty()
 	}
 
 	function displayVals() {
 	  var rootNote = $( "#rootnoteselect" ).val().toString();
-	noteSearch(rootNote)
+	  console.log(rootNote)
+	noteSearch([rootNote])
 		var chordType= $("#chordtypeselect").val();
 	 func= chordType + "(rootNote)"
 
@@ -16,32 +19,43 @@ function reset(){
 
 
 
+	stArr=[]
 function noteSearch(arr){
 
-	stArr=[]
-		
+	$('.vomit').empty()
 
 		$('.vomit').html(function(){
+			//console.log(stArr)
 			
-			for(u=0;u<arr.length;u++){
-				stArr.push(notes.indexOf(arr[u]))
-			}
+				stArr.push(notes.indexOf(arr[arr.length-1]))
+
+				console.log(stArr)
+			
 			
 
 			$(this).append("<br> <h3>scales featuring</h3> ")
 
 			for(h=0;h<arr.length;h++){
-				$(this).append("<strong>"+arr[h].toUpperCase()+"</> ")
+
+				//console.log(Number.isInteger(arr[h]))
+				//if(Number.isInteger(arr[h])==true){
+					//temp=notes[arr[h]].toString()
+				//}else{
+					//console.log(arr[1])
+					temp=[arr[h]].toString()
+				//}
+				
+				$(this).append("<strong>"+temp.toUpperCase()+"</> ")
 			}
 			$(this).append("<br>")
 			for(i=0;i<notes.length;i++){
 				$(this).append("<br> <strong> "+notes[i].toUpperCase()+":</strong> ")
 				for(k=0;k<scale.length;k++){
-
+					//debugger
+					//console.log(stArr)
 					ScaleReader(k,i,arr,stArr)
 
 				}$(this).append("<br>")
-			
 			}
 		})
 	}
@@ -50,10 +64,33 @@ function noteSearch(arr){
 
 $(document).ready(function() {
 
-	noteSearch(["c","d","g","f"])
- 
+	notArr=[]
+	//noteSearch(notArr)
+
 	$( "select" ).change( displayVals );
 	
+	$(".whiteKey,.blackKey").click(function(){
+
+		var pianoPress= $(this).text()
+		console.log(pianoPress)
+		var pianoKey = null
+		
+		if( pianoPress[1]=="#"){
+			pianoKey= pianoPress[0].toLowerCase()+"s"
+			notArr.push(pianoKey)
+			console.log(notArr[notArr.length-1])
+			
+		}else{
+			pianoKey= pianoPress[0].toLowerCase()
+			notArr.push(pianoKey)
+			
+		}
+		
+			
+			noteSearch(notArr)
+		
+
+	})
 		
 
 	$('.Minor').click(function(){

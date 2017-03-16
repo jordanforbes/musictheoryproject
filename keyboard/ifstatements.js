@@ -50,7 +50,7 @@ function ScaleReader(k,i,arr,stArr){
 			noteFinder(notes[i],scale[k]).indexOf(notes[stArr[3]])>=0 &&
 			noteFinder(notes[i],scale[k]).indexOf(notes[stArr[4]])>=0 &&
 			noteFinder(notes[i],scale[k]).indexOf(notes[stArr[5]])>=0 &&
-			noteFinder(notes[i],scale[k]).indexOf(notes[stArr[5]])>=0
+			noteFinder(notes[i],scale[k]).indexOf(notes[stArr[6]])>=0
 		){
 			$(".vomit").append("<br><strong>"+scale[k][7]+":</strong> ["+noteFinder(notes[i],scale[k])+"] ")
 		}
