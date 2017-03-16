@@ -37,23 +37,14 @@ function noteSearch(arr){
 			$(this).append("<br> <h3>scales featuring</h3> ")
 
 			for(h=0;h<arr.length;h++){
-
-				//console.log(Number.isInteger(arr[h]))
-				//if(Number.isInteger(arr[h])==true){
-					//temp=notes[arr[h]].toString()
-				//}else{
-					//console.log(arr[1])
-					temp=[arr[h]].toString()
-				//}
-				
-				$(this).append("<strong>"+temp.toUpperCase()+"</> ")
+					temp=[arr[h]].toString()			
+				$(this).append("<strong>"+temp.toUpperCase()+"</strong> ")
 			}
 			$(this).append("<br>")
 			for(i=0;i<notes.length;i++){
-				$(this).append("<br> <strong> "+notes[i].toUpperCase()+":</strong> ")
+				$(this).append("<br> <strong> <span class='keyroot'>"+notes[i].toUpperCase()+":</span></strong> ")
 				for(k=0;k<scale.length;k++){
-					//debugger
-					//console.log(stArr)
+		
 					ScaleReader(k,i,arr,stArr)
 
 				}$(this).append("<br>")
@@ -71,7 +62,7 @@ $(document).ready(function() {
 	$( "select" ).change( displayVals );
 	
 	$(".whiteKey,.blackKey").click(function(){
-
+		$(this).css("background-color","yellow")
 		var pianoPress= $(this).text()
 		console.log(pianoPress)
 		var pianoKey = null

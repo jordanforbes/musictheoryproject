@@ -5,6 +5,10 @@
 	
 }
 
+.keyroot{
+	color:red;
+}
+
 #rootnoteselect{
 	width:100px;
 	display:block;
