@@ -3,6 +3,7 @@ function reset(){
 		$(".whiteKey").css("background-color","white")
 		$(".blackKeySpace").css("background-color","white")
 		notArr=[]
+		stArr=[]
 		$(".vomit").empty()
 	}
 
