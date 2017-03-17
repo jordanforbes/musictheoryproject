@@ -1,6 +1,7 @@
 function ScaleReader(k,i,arr,stArr){
 	if(arr.length==1){
 		if(noteFinder(notes[i],scale[k]).indexOf(notes[stArr[0]])>=0){
+			//bigArr.push(noteFinder(notes[i],scale[k]))
 			$(".vomit").append("<br><strong>"+scale[k][7]+":</strong> ["+noteFinder(notes[i],scale[k])+"] ")	
 		}
 	}else if(arr.length==2){

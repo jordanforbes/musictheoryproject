@@ -44,14 +44,26 @@ function noteSearch(arr){
 			for(i=0;i<notes.length;i++){
 				$(this).append("<br> <strong> <span class='keyroot'>"+notes[i].toUpperCase()+":</span></strong> ")
 				for(k=0;k<scale.length;k++){
-		
+					bigArr=[]
 					ScaleReader(k,i,arr,stArr)
-
+					//console.log(bigArr)
 				}$(this).append("<br>")
 			}
 		})
 	}
-
+function chordNoteSearch(arr){
+	var i=0
+	var rootNote=arr[0].toUpperCase()
+	var chordFunctions=[Maj(arr[i]),Min(arr[i]),
+					Maj7(arr[i]),Min7(arr[i])]
+	var majObj ={name:"Major",func:Maj(arr[i])}
+	console.log(majObj.name +" "+ majObj.func)
+	$(".chordvomit").html(
+		"<p>"+rootNote+ " Major: "+ chordFunctions[0]+"</p>"
+		+"<p>"+rootNote+" Minor: "+chordFunctions[1]+"</p>"
+		+"<p>"+rootNote+" Major7: "+chordFunctions[2]+"</p>"
+		+"<p>"+rootNote+" Minor7: "+chordFunctions[3]+"</p>")
+}
 
 
 $(document).ready(function() {
@@ -80,6 +92,7 @@ $(document).ready(function() {
 		
 			
 			noteSearch(notArr)
+			chordNoteSearch(notArr)
 		
 
 	})

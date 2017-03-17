@@ -1,8 +1,15 @@
 .appcontainer .container{
 	border:10px solid green;
-	padding:30px;
-	height:600px;
+	padding:10px;
+	height:1000px;
 	
+}
+.vomit{
+	padding:30px;
+}
+.chordvomit{
+	padding:10px;
+	margin-left:400px;
 }
 
 .keyroot{
