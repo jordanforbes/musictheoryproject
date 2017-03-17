@@ -51,53 +51,68 @@ function noteSearch(arr){
 			}
 		})
 	}
-function chordNoteSearch(arr){
-	var i=0
-	
-	var rootNote=arr[0].toUpperCase()
-	var chordFunctions=[Maj(arr[i]),Min(arr[i]),
-					Maj7(arr[i]),Min7(arr[i])]
+function chordNoteSearch(y){
+	$(".chordvomit").empty()
+	//y=y[y.length-1]
+	var arr= notes
+	for(i=0;i<arr.length;i++){
+		
+		var rootNote=arr[i].toUpperCase()
 
-	var chordObj = [
-				{name:"Major",func:Maj(arr[i])},
-				{name:"Minor",func:Min(arr[i])},
-				{name:"Major 7",func:Maj7(arr[i])},
-				{name:"Minor 7",func:Min7(arr[i])},
-				{name:"Augmented",func:AugTri(arr[i])},
-				{name:"Diminished",func:DimTri(arr[i])},
-				{name:"5 Power Chord",func:fiveDyad(arr[i])}
-				]
-	console.log(chordObj.length)
+		var chordFunctions=[Maj(arr[i]),Min(arr[i]),
+						Maj7(arr[i]),Min7(arr[i])]
 
-	function print(){
-		for(j=0;j<chordObj.length;j++){
-			preArr=chordObj[j].func
-			thisArr=[]
-				console.log(preArr.length)
-			//function(){
-				for(x=0;x<preArr.length;x++){
-					if(preArr[x][1]=="s"){			
-						thisArr.push(preArr[x][0]+"#")
-					}else{
-						thisArr.push(preArr[x])
+		var chordObj = [
+					{name:"5 Power Chord",func:fiveDyad(arr[i])},
+					{name:"Major",func:Maj(arr[i])},
+					{name:"Minor",func:Min(arr[i])},
+					{name:"Augmented",func:AugTri(arr[i])},
+					{name:"Diminished",func:DimTri(arr[i])},
+					{name:"Sus 2",func:sus2(arr[i])},
+					{name:"Sus 4",func:sus4(arr[i])},
+					{name:"Major 6th",func:Maj6(arr[i])},
+					{name:"Minor 6th",func:Min6(arr[i])},
+					{name:"Major 7th",func:Maj7(arr[i])},
+					{name:"Major 7th Sus2",func:Maj7Sus2(arr[i])},
+					{name:"Major 7th Sus4",func:Maj7Sus4(arr[i])},
+					{name:"Minor 7th",func:Min7(arr[i])},
+					{name:"Dominant 7th",func:Dom7(arr[i])},
+					{name:"Dominant 7th Sus4",func:Dom7Sus4(arr[i])},
+					{name:"Half-Diminished 7th",func:HalfDim7(arr[i])},
+					{name:"Diminished 7th",func:Dim7(arr[i])}
+					//{name:"Augmented 7th",func:Aug7(arr[i])},
+					//{name:"Augmented-Major 7th",func:AugMaj7(arr[i])},
+					//{name:"Minor-Major 7th",func:MinMaj7(arr[i])}
+					]
+		console.log(chordObj.length)
+
+		function print(){
+			for(j=0;j<chordObj.length;j++){
+				preArr=chordObj[j].func
+				thisArr=[]
+					console.log(preArr.length)
+			
+					for(x=0;x<preArr.length;x++){
+						if(preArr[x][1]=="s"){			
+							thisArr.push(preArr[x][0]+"#")
+						}else{
+							thisArr.push(preArr[x])
+						}
 					}
-				}
-			//}
-
-			$(".chordvomit").append("<p>"+rootNote+" "+ chordObj[j].name +" "+ thisArr+"</p>")
-			console.log(chordObj[j].name+ thisArr +thisArr.length)
-
+					//too many if statements so i put it in the separate file called if statements
+				ChordReader(y,rootNote,chordObj,thisArr)
+			}
 		}
+		print()
 	}
-	print()
 }
 
 
 $(document).ready(function() {
 
 	notArr=[]
-	//noteSearch(notArr)
-
+	chordArr=[]
+	
 	$( "select" ).change( displayVals );
 	
 	$(".whiteKey,.blackKey").click(function(){
@@ -107,19 +122,19 @@ $(document).ready(function() {
 		var pianoKey = null
 		
 		if( pianoPress[1]=="#"){
+			chordArr.push(pianoPress[0].toLowerCase()+pianoPress[1])
 			pianoKey= pianoPress[0].toLowerCase()+"s"
 			notArr.push(pianoKey)
 			console.log(notArr[notArr.length-1])
 			
 		}else{
+			chordArr.push(pianoPress[0].toLowerCase())
 			pianoKey= pianoPress[0].toLowerCase()
 			notArr.push(pianoKey)
 			
 		}
-		
-			
 			noteSearch(notArr)
-			chordNoteSearch(notArr)
+			chordNoteSearch(chordArr)
 		
 
 	})
