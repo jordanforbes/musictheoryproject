@@ -82,13 +82,13 @@ function chordNoteSearch(y){
 					{name:"Half-Diminished 7th",func:HalfDim7(arr[i])},
 					{name:"Diminished 7th",func:Dim7(arr[i])},
 					{name:"Augmented 7th",func:Aug7(arr[i])},
-					{name:"Augmented-Major 7th",func:AugMaj7(arr[i])}
+					//{name:"Augmented-Major 7th",func:AugMaj7(arr[i])},
 					//{name:"Minor-Major 7th",func:MinMaj7(arr[i])}
 					]
 		console.log(chordObj.length)
 
 		function print(){
-			for(j=0;j<chordObj.length-1;j++){
+			for(j=0;j<chordObj.length-2;j++){
 				preArr=chordObj[j].func
 				thisArr=[]
 					console.log(preArr+"preArr")

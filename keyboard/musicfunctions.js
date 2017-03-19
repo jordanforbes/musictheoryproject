@@ -19,7 +19,8 @@ var aeolian= scale[5];
 var locrian= scale[6];
 var diminished= scale[7]
 var aug7s= [0,2,4,6,8,9,10,"aug7"]
-var chromatic= [0,1,2,3,4,5,6,7,8,9,10,11]
+var majmin7s=[0,1,3,4,6,8,9,11,"diminished"]
+var chromatic= [0,1,2,3,4,5,6,7,8,9,10,11,"chromatic"]
 
 
 
@@ -125,6 +126,12 @@ function Maj7Sus2(n){
   finArr=[]
   noteFinder(n,majorScales[0],[0,1,4,6])
   console.log(finArr)
+  return finArr
+}
+
+function MinMaj7(n){
+  finArr=[]
+  noteFinder(n,chromatic[0],[0,3,7,11])
   return finArr
 }
 
