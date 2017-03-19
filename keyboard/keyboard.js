@@ -79,8 +79,8 @@ function chordNoteSearch(y){
 					{name:"Dominant 7th",func:Dom7(arr[i])},
 					{name:"Dominant 7th Sus4",func:Dom7Sus4(arr[i])},
 					{name:"Half-Diminished 7th",func:HalfDim7(arr[i])},
-					{name:"Diminished 7th",func:Dim7(arr[i])}
-					//{name:"Augmented 7th",func:Aug7(arr[i])},
+					{name:"Diminished 7th",func:Dim7(arr[i])},
+					{name:"Augmented 7th",func:Aug7(arr[i])}
 					//{name:"Augmented-Major 7th",func:AugMaj7(arr[i])},
 					//{name:"Minor-Major 7th",func:MinMaj7(arr[i])}
 					]
