@@ -2,20 +2,11 @@
 
 //notes
 var notes= ["c", "cs", "d", "ds", "e", "f", "fs", "g", "gs", "a", "as", "b"]
-<<<<<<< HEAD
-var chromatic= [0,1,2,3,4,5,6,7,8,9,10,11]
-
-//scale list 
-var scale= [ [0,2,4,5,7,9,11,"ionian"],[0,2,3,5,7,9,10,"dorian"],[0,1,3,5,7,8,10,"phrygian"],
-            [0,2,4,6,7,9,11,"lydian"],[0,2,4,5,7,9,10,"mixolydian"],[0,2,3,5,7,9,10,"aeolian"],[0,1,3,5,6,8,10,"locrian"],
-            [0,1,3,4,6,8,9,11,"diminished"]]
-=======
 
 
 //scale list 
 var scale= [ [0,2,4,5,7,9,11,"ionian"],[0,2,3,5,7,9,10,"dorian"],[0,1,3,5,7,8,10,"phrygian"],
             [0,2,4,6,7,9,11,"lydian"],[0,2,4,5,7,9,10,"mixolydian"],[0,2,3,5,7,9,10,"aeolian"],[0,1,3,5,6,8,10,"locrian"] ]
->>>>>>> master
 
     //modes
 var ionian= scale[0];
@@ -25,21 +16,10 @@ var lydian= scale[3];
 var mixolydian= scale[4];
 var aeolian= scale[5];
 var locrian= scale[6];
-<<<<<<< HEAD
-var diminished= scale[7]
-var aug7s= [0,2,4,6,8,9,10,"aug7"]
-var chromatic= [0,1,2,3,4,5,6,7,8,9,10,11]
-
-
-
-//chord list
-var chord= [[0,2,4],[0,2,5],[0,2,4,6],[0,4],[0,1,4],[0,3,4],[0,2,4,5]]
-=======
 
 
 //chord list
 var chord= [[0,2,4],[0,2,5],[0,2,4,6],[0,4]]
->>>>>>> master
 
     //chord types
 var tri = chord[0]
@@ -49,13 +29,7 @@ var fi = chord[3]
 
 var majorScales = ["ionian", "lydian", "mixolydian"];
 var minorScales = ["dorian", "phrygian", "aeolian", "locrian"];
-<<<<<<< HEAD
-var dimScale = ["diminished"]
-var aug7scale =["aug7s"]
-var chromatic = ["chromatic"]
-=======
 
->>>>>>> master
 //notes finder
 function noteFinder(n,modeName,chord){
   
@@ -81,7 +55,7 @@ function noteFinder(n,modeName,chord){
     element=element+x+12
  
   }
-return scaleArr
+
   });
     //chord notes finder
   if(chord != undefined){
@@ -94,12 +68,8 @@ return scaleArr
     })
       finArr= chordArr
     }else{
-      return scaleArr
-<<<<<<< HEAD
-      
-=======
-      //return scaleArr
->>>>>>> master
+      console.log(n.toUpperCase() + " "+ modeName + " scale")
+      console.log(scaleArr)
     }
   
 }
@@ -114,50 +84,6 @@ function Maj7(n){
   return finArr
 }
 
-<<<<<<< HEAD
-function Dom7(n){
-  finArr=[]
-  noteFinder(n,majorScales[2],chord[2])
-  console.log(finArr)
-  return finArr
-}
-
-function HalfDim7(n){
-  finArr=[]
-  noteFinder(n,minorScales[3],chord[2])
-  console.log(finArr)
-  return finArr
-}
-
-function Dim7(n){
-  finArr=[]
-  noteFinder(n,dimScale[0],chord[2])
-  return finArr
-}
-
-function Dom7Sus4(n){
-  finArr=[]
-  noteFinder(n,majorScales[2],[0,3,4,6])
-  console.log(finArr)
-  return finArr
-}
-
-function Maj7Sus2(n){
-  finArr=[]
-  noteFinder(n,majorScales[0],[0,1,4,6])
-  console.log(finArr)
-  return finArr
-}
-
-function Maj7Sus4(n){
-  finArr=[]
-  noteFinder(n,majorScales[0],[0,3,4,6])
-  console.log(finArr)
-  return finArr
-}
-
-=======
->>>>>>> master
 function Maj(n){
   finArr=[]
   //return n.toUpperCase() + " Major"
@@ -165,14 +91,6 @@ function Maj(n){
   console.log(finArr)
   return finArr
 }
-
-function Min7(n){
-  finArr=[]
-  noteFinder(n,minorScales[2],chord[2])
-  console.log(finArr)
-  return finArr
-}
-
 
 function Min(n){
   finArr=[]
@@ -187,14 +105,6 @@ function AugTri(n){
   console.log(finArr)
   return finArr
 }
-<<<<<<< HEAD
-function Aug7(n){
-  finArr=[]
-  noteFinder(n,aug7s,chord[2])
-  return finArr
-}
-=======
->>>>>>> master
 
 function DimTri(n){
   finArr=[]
@@ -204,39 +114,8 @@ function DimTri(n){
 }
 
 function fiveDyad(n){
-<<<<<<< HEAD
-  finArr=[]
   console.log(n.toUpperCase() + " Power Chord")
   noteFinder(n,majorScales[0],chord[3])
-  return finArr
-}
-
-function sus2(n){
-  finArr=[]
-  noteFinder(n,majorScales[0],chord[4])
-  return finArr
-}
-
-function sus4(n){
-  finArr=[]
-  noteFinder(n,majorScales[0],chord[5])
-  return finArr
-}
-
-function Maj6(n){
-  finArr=[]
-  noteFinder(n,majorScales[0],chord[6])
-  return finArr
-}
-
-function Min6(n){
-  finArr=[]
-  noteFinder(n,minorScales[2],chord[6])
-  return finArr
-=======
-  console.log(n.toUpperCase() + " Power Chord")
-  noteFinder(n,majorScales[0],chord[3])
->>>>>>> master
 }
 
 /*

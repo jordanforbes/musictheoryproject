@@ -1,0 +1,309 @@
+.container{
+
+	/*background-color: blue;*/
+    height: 100%;
+    width: 100%;
+    min-width: 100%;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+    position: absolute;
+    margin: 0 auto;
+}
+
+
+
+
+
+.brand{
+	
+	/*font-family: 'Bubblegum Sans', cursive;*/
+	
+
+	/*outline: solid black 1px;*/
+
+
+}
+
+
+.navbar-brand{
+
+
+	/*background-image: url("https://lh3.googleusercontent.com/32wXOByV5AiXHpwx_xjQmjcRuAtQ4RqoCDsa09kNdC577S6DMPvHWMU2Y1v-CEpY2a7V=w300");*/
+	
+	background-image: url("mdnote03.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+	color: white! important;
+	font-size: 170%;
+
+
+
+	/*height: auto;
+*/
+
+	/*outline: solid black 1px;*/
+	top: 7%! important;
+	position: absolute! important;
+
+
+}
+
+
+
+#notePic{
+
+
+	
+	
+
+}
+
+.navbar{
+
+	padding-top: 3%;
+
+}
+
+.navEdit{
+
+
+	/*margin-top: 1%;*/
+	float: left;
+	padding-top: 1%;
+
+
+}
+
+.navMove{
+
+	position: absolute;
+	left: 15%;
+	top: 0%;
+
+
+}
+
+
+.seperatorBar{
+
+	width: 100%;
+	display: block;
+	position: relative;
+	height: 10px;
+	/*background-color: green;*/
+
+}
+
+
+.keyboardContainer{
+
+	margin-left: 10%;
+	margin-right: 10%;
+	margin-top: 10%;
+	width: 80%;
+	height: 40%;
+	border: solid black 3px;
+	border-radius: 5px;
+}
+
+
+.keyboardContainer:hover {
+
+	cursor:pointer;
+
+
+}
+
+.blackKeyContainer{
+
+	width: 100%;
+	height: 60%;
+	/*border: solid blue 1px;*/
+	position: relative;
+	/*z-index: 1;*/
+	margin: 0 auto;
+}
+
+
+.blackKeySpace{
+
+
+	width: 2.382%;
+	height: 100%;
+	/*border: solid purple 1px;*/
+	display: inline-block;
+	float: left;
+}
+
+
+.blackKey{
+
+	width: 4.76%;
+	height: 100%;
+	border-left: solid black 2px;
+	border-right: solid black 2px;
+	border-bottom: solid black 2px;
+	display: inline-block;
+
+	float: left;
+	background-color: black;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	position: relative;
+	color: white;
+	line-height: 300%;
+	white-space: pre-wrap;
+
+}
+
+
+.noteB{
+
+	height: auto;
+	width: auto;
+	/*outline: solid green 1px;*/
+	position: absolute;
+	bottom: 0;
+	display: none;
+
+
+	/*font size for keys with centering*/
+
+	left: 15%;
+	right: 15%;
+	font-size: 150%;
+
+}
+
+.whiteKeyContainer{
+
+	
+	width: 100%;
+	height: 40%;
+	/*border: solid black 1px;
+	border-radius: 5px;*/
+	position: static;
+	/*z-index: -1;*/
+}
+
+.whiteKey{
+
+	width: 7.142%;
+	height: 100%;
+	display: inline-block;
+	float: left;
+	border-left: solid black 1px;
+	border-right: solid black 1px;
+	background-color: white;
+
+	/*outline: solid black 1px;*/
+	line-height: 500%;
+	position: relative;
+	color: black;
+	/*background-color: blue;*/
+	
+}
+
+
+
+.noteW{
+
+	height: auto;
+	width: auto;
+	/*outline: solid green 1px;*/
+	position: absolute;
+	bottom: 0;
+	display: none;
+
+
+	/*font size for keys with centering*/
+
+	left: 35%;
+	right: 35%;
+	font-size: 150%;
+
+}
+
+.rightSideBorder{
+
+	border-right: solid black 1px;: 
+
+
+}
+
+
+.leftSideBorder{
+
+	border-left: solid black 1px;: 
+
+
+}
+
+
+.moveDown{
+
+	bottom: -50%;
+
+
+}
+
+.dropdownContainer{
+
+	right: 5%;
+	position: absolute;
+	top: 10%;
+	width: 50%;
+	/*border: solid black 1px;*/
+/*	width: auto;
+	max-height: 30%;*/
+
+}
+
+
+.dropdown1{
+
+
+	display: inline;
+	margin-left: 40%;
+}
+
+.dropdown2{
+
+
+	/*display: inline;*/
+	float: right;
+
+}
+
+
+#content{
+
+	width: 90%;
+	height: 60%;
+	margin: 0% 0 0 6%;
+	border: solid black 1px;
+	display: none;
+
+}
+
+#content2{
+
+	width: 97%;
+	height: 85%;
+	border: solid red 1px;
+	display: relative;
+	z-index: 4;
+	margin-left: 1%;
+
+}
+
+
+.Chordname{
+
+
+	/*font-family: 'Bubblegum Sans', cursive;*/
+
+
+
+}
