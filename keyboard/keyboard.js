@@ -51,7 +51,7 @@ function noteSearch(arr){
 			}
 		})
 	}
-<<<<<<< HEAD
+
 function chordNoteSearch(y){
 	$(".chordvomit").empty()
 	//y=y[y.length-1]
@@ -106,7 +106,7 @@ function chordNoteSearch(y){
 		}
 		print()
 	}
-=======
+/*
 function chordNoteSearch(arr){
 	var i=0
 	var rootNote=arr[0].toUpperCase()
@@ -119,20 +119,18 @@ function chordNoteSearch(arr){
 		+"<p>"+rootNote+" Minor: "+chordFunctions[1]+"</p>"
 		+"<p>"+rootNote+" Major7: "+chordFunctions[2]+"</p>"
 		+"<p>"+rootNote+" Minor7: "+chordFunctions[3]+"</p>")
->>>>>>> master
+*/
 }
 
 
 $(document).ready(function() {
 
 	notArr=[]
-<<<<<<< HEAD
 	chordArr=[]
 	
-=======
+
 	//noteSearch(notArr)
 
->>>>>>> master
 	$( "select" ).change( displayVals );
 	
 	$(".whiteKey,.blackKey").click(function(){
@@ -142,32 +140,24 @@ $(document).ready(function() {
 		var pianoKey = null
 		
 		if( pianoPress[1]=="#"){
-<<<<<<< HEAD
 			chordArr.push(pianoPress[0].toLowerCase()+pianoPress[1])
-=======
->>>>>>> master
+
 			pianoKey= pianoPress[0].toLowerCase()+"s"
 			notArr.push(pianoKey)
 			console.log(notArr[notArr.length-1])
 			
 		}else{
-<<<<<<< HEAD
+
 			chordArr.push(pianoPress[0].toLowerCase())
-=======
->>>>>>> master
+
 			pianoKey= pianoPress[0].toLowerCase()
 			notArr.push(pianoKey)
 			
 		}
-<<<<<<< HEAD
+
 			noteSearch(notArr)
 			chordNoteSearch(chordArr)
-=======
-		
-			
-			noteSearch(notArr)
-			chordNoteSearch(notArr)
->>>>>>> master
+
 		
 
 	})
