@@ -28,10 +28,6 @@ var chord= [[0,2,4],[0,2,5],[0,2,4,6],[0,4],[0,1,4],[0,3,4],[0,2,4,5]]
 
 
     //chord types
-var tri = chord[0]
-var augTri= chord[1]
-var sev = chord[2]
-var fi = chord[3]
 
 var majorScales = ["ionian", "lydian", "mixolydian"];
 var minorScales = ["dorian", "phrygian", "aeolian", "locrian"];
@@ -93,7 +89,10 @@ function Maj7(n){
   console.log(finArr)
   return finArr
 }
-
+function AugMaj7(n){
+  finArr=[
+  noteFinder(n,dimScale[0],[0,4,5,7])]
+}
 
 function Dom7(n){
   finArr=[]

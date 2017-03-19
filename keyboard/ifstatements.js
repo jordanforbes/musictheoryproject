@@ -76,7 +76,7 @@ function ChordReader(y,rootNote,chordObj,thisArr){
 			thisArr.indexOf(y[2])>=0){
 				$(".chordvomit").append("<p>"+rootNote+" "+ chordObj[j].name +" "+ thisArr+"</p>")
 		}
-	}else if(y.length==3){
+	}else if(y.length==4){
 		if(thisArr.indexOf(y[0])>=0 &&
 			thisArr.indexOf(y[1])>=0 &&
 			thisArr.indexOf(y[2])>=0 &&
