@@ -88,7 +88,7 @@ function chordNoteSearch(y){
 		console.log(chordObj.length)
 
 		function print(){
-			for(j=0;j<chordObj.length-2;j++){
+			for(j=0;j<chordObj.length;j++){
 				preArr=chordObj[j].func
 				thisArr=[]
 					console.log(preArr+"preArr")
